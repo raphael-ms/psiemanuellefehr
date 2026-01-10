@@ -22,13 +22,6 @@
       }
     },
     {
-      "label": "Medium Integration",
-      "image": {
-        "src": "../../images/medium.png",
-        "alt": ""
-      }
-    },
-    {
       "label": "Animations",
       "image": {
         "src": "../../images/gem-stone.png",

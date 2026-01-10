@@ -1,0 +1,52 @@
+/* — Video + quote section — */
+
+.VideoSection {
+  position: relative;
+  width: 100vw;
+  height: 20vh;
+  margin-bottom: 5rem;
+  min-height: 360px;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.VideoOverlay {
+  position: absolute;
+  inset: 0;
+}
+
+.VideoQuote {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.VideoQuote p {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.5;
+}
+
+.VideoQuote footer {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  opacity: 0.9;
+}

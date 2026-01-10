@@ -1,27 +1,25 @@
 import React from "react";
 import {
   AboutSection,
-  ArticlesSection,
-  ContactSection,
   HeroSection,
-  InterestsSection,
   Page,
-  ProjectsSection,
   Seo,
 } from "gatsby-theme-portfolio-minimal";
+import { ContactSection } from "../gatsby-theme-portfolio-minimal/sections/Contact";
+import { ProjectsSection } from "../gatsby-theme-portfolio-minimal/sections/Projects";
+import { TestimonialSection } from "../gatsby-theme-portfolio-minimal/sections/Testimonials";
 
 export default function IndexPage() {
   return (
     <>
-      <Seo title="Gatsby Starter for Portfolio Minimal" />
+      <Seo title="Emanuelle Fehr . Psicoterapia Online" />
       <Page useSplashScreenAnimation>
         <HeroSection sectionId="hero" />
-        <ArticlesSection sectionId="articles" heading="Latest Articles" sources={['Medium']} />
-        <AboutSection sectionId="about" heading="About Portfolio Minimal" />
-        <InterestsSection sectionId="details" heading="Details" />
-        <ProjectsSection sectionId="features" heading="Built-in Features" />
-        <ContactSection sectionId="github" heading="Issues?" />
-      </Page>
+        <AboutSection sectionId="sobre" heading="Formação Profissional" />
+        <TestimonialSection sectionId="depoimentos" heading="Depoimentos" />
+        <ProjectsSection sectionId="servicos" heading="Serviços" />
+        <ContactSection sectionId="contato" heading="Contato" />
+      </Page >
     </>
   );
 }

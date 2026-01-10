@@ -1,20 +1,20 @@
 {
-  "intro": "Hej",
+  "intro": "Olá, Seja Bem Vindo (a)",
   "heroPhoto": {
-    "src": "../../images/lego-dummy.png",
+    "src": "../../images/heroimage.avif",
     "alt": "My Photo"
   },
   "image": {
     "src": "../../images/waving-hand.png",
     "alt": "Waving Hand Emoji"
   },
-  "title": "I'm a Gatsby Starter",
+  "title": " Emanuelle Fehr.",
   "subtitle": {
-    "prefix": "I do all the setup ",
-    "highlight": "for you",
+    "prefix": "Se você chegou até aqui, seja em busca de apoio para si ou para alguém próximo, já deu um passo significativo em direção ao cuidado.",
+    "highlight": "cuidado",
     "suffix": "."
   },
-  "description": "A Gatsby Starter Project to easily get started with Portfolio Minimal theme.",
+  "description": " A terapia é um espaço seguro e confidencial, pensado para promover autoconhecimento, acolhimento e desenvolvimento pessoal, com base em práticas fundamentadas cientificamente. Conheça um pouco mais sobre mim, minha formação e como posso te ajudar.",
   "socialProfiles": {
     "from": ["LinkedIn", "Medium", "Github", "Mail"],
     "showIcons": false

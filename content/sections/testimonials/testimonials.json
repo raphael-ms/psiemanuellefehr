@@ -1,0 +1,25 @@
+{
+  "testimonials": [
+    {
+      "visible": true,
+      "name": "C. M.",
+      "gender": "♀",
+      "countryEmoji": "🇩🇰",
+      "text": "No meu processo terapêutico, o que mais me ajudou foi a forma como fui orientada a descomplicar situações e a utilizar ferramentas para controlar melhor a minha ansiedade. A comunicação clara e acolhedora fez com que me sentisse confortável para partilhar tudo, sem medo de julgamento. Além disso, os exercícios propostos entre sessões têm sido muito úteis no meu dia a dia, ajudando-me a aplicar o que aprendi na vida cotidiana..."
+    },
+    {
+      "visible": true,
+      "name": "D. C.",
+      "gender": "♂",
+      "countryEmoji": "🇳🇱",
+      "text": "A minha experiência com a psicóloga Emanuelle Fehr é muito positiva. Ajudou-me a mudar a forma como vejo a terapia e o que significa procurar ajuda. Tenho sido acompanhado desde Novembro de 2024 até hoje (Novembro de 2025) sinto que este processo teve um impacto significativo. A maneira como conduz as sessões, com sensibilidade, clareza e uma empatia muito genuína, fez-me sentir sempre num espaço seguro e construtivo. Sinto que tive um grande desenvolvimento pessoal a nível de compreensão emocional e uma clareza e segurança sobre conseguir tomar decisões de forma ponderada e alinhadas com o que realmente é melhor para mim. Posso dizer, sem dúvida alguma, que me sinto uma pessoa mais feliz. Muito obrigado Emanuelle..."
+    },
+    {
+      "visible": true,
+      "name": "A. M.",
+      "gender": "♀",
+      "countryEmoji": "🇵🇹",
+      "text": "Durante muito tempo vivi num estado constante de ansiedade. A minha mente estava sempre a mil, cheia de preocupações e pensamentos que não me deixavam descansar. Com a PHDA, sentia-me desorganizado, esquecia compromissos e ficava frustrado comigo próprio por não conseguir fazer tudo o que queria. A terapia com a Dra. Emanuelle ajudou-me a compreender melhor o meu funcionamento e a encontrar estratégias que realmente fazem sentido para mim. Aprendi a aceitar o meu ritmo, a reconhecer os meus limites e a celebrar os pequenos progressos. Hoje sinto-me melhor e com mais confiança para lidar com os desafios do dia a dia..."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+body[data-theme='lightTheme'] {
+  --primary-color: #093300;          /* muted rose / wine */
+  --secondary-color: #0933002b;        /* very light blush background */
+  --tertiary-color: #f2f2f2;
+  --text-color: #1f1f1f;             /* high contrast, not pure black */
+  --subtext-color: #5f5f5f;          /* WCAG-safe secondary text */
+  --background-color: #f7f4f6;
+  --card-background-color: #fffafb;  /* barely pink cards */
+  --scroll-bar-color: rgba(122, 46, 77, 0.4);
+  --box-shadow-color: rgba(0, 0, 0, 0.12);
+  --box-shadow-hover-color: rgba(0, 0, 0, 0.24);
+  --base-font: 'Roboto', Arial, sans-serif;
+  --code-block-bg: #151f28;
+  --code-block-var: #ff7bbd;
+  --code-block-num: #ffd166;
+  --code-block-fun: #c77dff;
+  --code-block-keyword: #4cc9f0;
+  --code-block-comment: #8b9bb4;
+  --code-block-tkimp: #f8961e;
+}
+
+body[data-theme='darkTheme'] {
+  --primary-color: #e6b6c6;          /* soft rose for links & accents */
+  --secondary-color: #2b2226;        /* warm dark blush */
+  --tertiary-color: #1f1b1d;
+  --text-color: rgba(255, 255, 255, 0.9);
+  --subtext-color: #c4bfc2;
+  --background-color: #141214;       /* warm near-black */
+  --card-background-color: #1d181b;  /* slightly lifted cards */
+  --scroll-bar-color: rgba(230, 182, 198, 0.45);
+  --box-shadow-color: rgba(0, 0, 0, 0.4);
+  --box-shadow-hover-color: rgba(0, 0, 0, 0.65);
+  --base-font: 'Roboto', Arial, sans-serif;
+  --code-block-bg: #151f28;
+  --code-block-var: #ff7bbd;
+  --code-block-num: #ffd166;
+  --code-block-fun: #c77dff;
+  --code-block-keyword: #4cc9f0;
+  --code-block-comment: #8b9bb4;
+  --code-block-tkimp: #f8961e;
+}

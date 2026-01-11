@@ -12,7 +12,7 @@ import { TestimonialSection } from "../gatsby-theme-portfolio-minimal/sections/T
 export default function IndexPage() {
   return (
     <>
-      <Seo title="Emanuelle Fehr . Psicoterapia Online" noIndex={false} />
+      <Seo title="Psicóloga Online | Terapia Cognitivo-Comportamental | Emanuelle Fehr" noIndex={false} />
       <Page useSplashScreenAnimation>
         <HeroSection sectionId="hero" />
         <AboutSection sectionId="sobre" heading="Formação Profissional" />

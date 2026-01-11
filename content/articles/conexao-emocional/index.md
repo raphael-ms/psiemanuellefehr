@@ -12,6 +12,9 @@ keywords:
   - "Cuidado"
   - "Sexualidade"
   - "Reaprimorar"
+  - "Psicologia Online"
+  - "Ansiedade"
+  - "Consulta Psicológica"
 ---
 
 Como explorar a própria relação e compreender o que realmente está acontecendo

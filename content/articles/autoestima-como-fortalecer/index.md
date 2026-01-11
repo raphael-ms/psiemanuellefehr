@@ -12,6 +12,9 @@ keywords:
   - "Cuidado"
   - "Austoestima"
   - "Autocuidado"
+  - "Psicologia Online"
+  - "Ansiedade"
+  - "Consulta Psicológica"
 ---
 
 Você já se pegou duvidando do seu valor ou sentindo que nunca é “bom o bastante”? Esses pensamentos não surgem do nada: eles estão ligados à forma como nossa **autoestima** foi construída ao longo da vida. Entender esse processo é o primeiro passo para mudar a maneira como nos vemos e, consequentemente, como nos relacionamos com o mundo.

@@ -31,14 +31,13 @@ export function Footer(): React.ReactElement {
                 <div className={classes.Links}>
                     {siteConfiguration.navigation.footer.map((linkObject, key) => {
                         return (
-                            <Link
+                            <span
                                 key={key}
-                                to={linkObject.url}
                                 aria-label={linkObject.label}
                                 style={{ color: darkModeEnabled ? 'var(--primary-color)' : 'var(--background-color)' }}
                             >
                                 {linkObject.label}
-                            </Link>
+                            </span>
                         );
                     })}
                 </div>

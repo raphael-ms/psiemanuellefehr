@@ -17,10 +17,10 @@ interface LogoProps {
   theme?: Theme;
 }
 
-export function Logo(props: LogoProps): React.ReactElement {
+export function Logo(props: Readonly<LogoProps>): React.ReactElement {
   const { globalState } = useGlobalState();
   const { logo } = useSiteConfiguration();
-  const fontSize = "2rem";
+  const fontSize = props.fontSize || "2rem";
   const color = props.color || "var(--primary-color)";
 
   const Logo = getLogoContent(logo.image, logo.text);
@@ -30,8 +30,7 @@ export function Logo(props: LogoProps): React.ReactElement {
   const ThemeSpecificLogo = theme === Theme.Dark ? LogoDark || Logo : Logo;
 
   return (
-    <>
-      <div>
+    <div>
         <div
           className={classes.Logo}
           aria-roledescription="logo"
@@ -42,12 +41,11 @@ export function Logo(props: LogoProps): React.ReactElement {
         <div
           className={classes.Logo}
           aria-roledescription="slogan"
-          style={{ fontSize: "0.7rem", color }}
+          style={{ fontSize: "0.6rem", color }}
         >
           Psicóloga Especialista em Terapia Cognitivo Comportamental
         </div>
       </div>
-    </>
   );
 }
 

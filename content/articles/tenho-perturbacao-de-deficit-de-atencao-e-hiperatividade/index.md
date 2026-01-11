@@ -12,6 +12,9 @@ keywords:
   - "Cuidado"
   - "Deficit de Atencao"
   - "Reaprimorar"
+  - "Psicologia Online"
+  - "Ansiedade"
+  - "Consulta Psicológica"
 ---
 
 _Você já se pegou pensando: “Será que tenho_ **_défice de atenção_** _ou só estou com a mente acelerada demais? ”No mundo atual, com excesso de informações, múltiplas tarefas e notificações a cada minuto, é comum sentir dificuldade para se concentrar. Mas como saber se isso é um transtorno de atenção ou apenas um momento de hiperestimulação? Entender essa diferença é essencial para encontrar equilíbrio e cuidar da saúde mental._

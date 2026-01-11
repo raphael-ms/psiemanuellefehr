@@ -2,19 +2,10 @@
     position: relative;
     z-index: 9;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-color);
-    /* Disable effects when sidebar is open */
     filter: none !important;
     pointer-events: auto !important;
     user-select: auto !important;
-    line-height: 1.6rem;
-}
-
-.Logo img,
-.Logo svg,
-.Logo picture > img {
-    width: 160px !important;
-    height: 80px !important;
-    object-fit: contain !important;
+    line-height: 1.5rem;
 }

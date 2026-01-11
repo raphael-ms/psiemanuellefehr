@@ -32,18 +32,10 @@
   transform: rotate(180deg);
 }
 
-.slider-container .review-img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  margin-inline: auto;
-}
-
 /* Splide customization */
 .splide__track {
   border-radius: 1rem;
+  box-shadow: 0 12px 24px var(--box-shadow-color);
 }
 
 .splide__slide {
@@ -58,11 +50,8 @@
 .slider-container .content .text {
   margin-bottom: 1rem;
   font-size: 1.1rem;
-}
-
-.slider-container .content .rating {
-  display: inline-block;
-  line-height: 1;
+  overflow: auto;
+  max-height: 60vh;
 }
 
 .slider-container .content .user {

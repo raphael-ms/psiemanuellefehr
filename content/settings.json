@@ -6,7 +6,7 @@
     "titleTemplate": "%s · Portfolio Minimal",
     "description": "Este é o website da psicologa Emanuelle Fehr, seja bem-vindo",
     "avatar": "../content/images/profile.png",
-    "bio": "Sou psicóloga clínica, especializada em oferecer apoio emocional e em criar espaços seguros, acolhedores e confidenciais, onde cada pessoa possa se expressar com liberdade",
+    "bio": "Sou psicóloga clínica, especializada em oferecer apoio emocional e em criar espaços seguros, acolhedores e confidenciais, onde cada pessoa possa se expressar com liberdade.",
     "author": "Emanuelle Fehr",
     "social": {
       "linkedin": "https://www.linkedin.com/in/emanuelle-fehr-ba3146226/",
@@ -33,7 +33,7 @@
     },
     "featureToggles": {
       "useDarkModeAsDefault": false,
-      "useDarkModeBasedOnUsersPreference": false,
+      "useDarkModeBasedOnUsersPreference": true,
       "useCookieBar": false
     }
   }

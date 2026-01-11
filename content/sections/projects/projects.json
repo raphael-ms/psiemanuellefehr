@@ -6,8 +6,7 @@
       "description": "A terapia online oferece um espaço seguro e acolhedor para explorar pensamentos e emoções, em qualquer lugar onde se sinta confortável. As sessões acontecem por videochamada, sendo importante estar em um local tranquilo e seguro e contar com uma conexão de internet estável. ",
       "image": {
         "src": "../../images/clement-h-95YRwf6CNw8-unsplash.jpg",
-        "alt": "Quick Setup",
-        "linkTo": "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal-theme"
+        "alt": "Terapia Online"
       }
     },
     {
@@ -17,7 +16,7 @@
       "tags": [],
       "image": {
         "src": "../../images/kelly-sikkema-Hl3LUdyKRic-unsplash.jpg",
-        "alt": "Extendable Layout"
+        "alt": "Flexibilidade"
       }
     },
     {
@@ -26,8 +25,8 @@
       "description": "A comunicação é facilitada por meio de videochamadas, chats e e-mails, garantindo que você se sinta ouvido e compreendido durante todo o processo terapêutico.",
       "tags": [],
       "image": {
-        "src": "../../images/kelly-sikkema-Hl3LUdyKRic-unsplash.jpg",
-        "alt": "Multiple Themes"
+        "src": "../../images/charles-deluvio-DgoyKNgPiFQ-unsplash.jpg",
+        "alt": "Comunicacao Eficaz"
       }
     }
   ],

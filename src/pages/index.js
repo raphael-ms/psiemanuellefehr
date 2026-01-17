@@ -13,7 +13,7 @@ export default function IndexPage() {
   return (
     <>
       <Seo title="Psicóloga Online | Terapia Cognitivo-Comportamental | Emanuelle Fehr" noIndex={false} />
-      <Page useSplashScreenAnimation>
+      <Page>
         <HeroSection sectionId="hero" />
         <AboutSection sectionId="sobre" heading="Formação Profissional" />
         <TestimonialSection sectionId="depoimentos" heading="Depoimentos" />

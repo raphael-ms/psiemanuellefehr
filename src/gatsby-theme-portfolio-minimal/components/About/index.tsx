@@ -22,27 +22,27 @@ export function AboutSection(): React.ReactElement {
 
           <div className={classes.AboutText}>
             <p>
-              Sou <u>psicóloga clínica</u>, especializada em oferecer apoio
+              Sou <b>psicóloga clínica</b>, especializada em oferecer apoio
               emocional e em criar espaços{" "}
-              <u>seguros, acolhedores e confidenciais</u>, onde cada pessoa
+              <b>seguros, acolhedores e confidenciais</b>, onde cada pessoa
               possa se expressar com liberdade. Utilizo a{" "}
-              <u>Terapia Cognitivo-Comportamental (TCC)</u> e a Terapia do
+              <b>Terapia Cognitivo-Comportamental (TCC)</b> e a Terapia do
               Esquema para auxiliar no manejo de ansiedade, depressão, fobia
               social e outras dificuldades emocionais, promovendo{" "}
-              <u>
+              <b>
                 pensamentos mais adaptativos, estratégias de resolução de
                 problemas e expressão saudável das emoções.
-              </u>
+              </b>
             </p>
 
             <p>
               A minha prática é marcada por um olhar{" "}
-              <u>culturalmente sensível,</u>
+              <b>culturalmente sensível,</b>
               atenta a{" "}
-              <u>
+              <b>
                 questões de género, interculturalidade e vínculos afetivos,
-              </u>{" "}
-              bem como ao acolhimento de pessoas <u>neurodiversas.</u>
+              </b>{" "}
+              bem como ao acolhimento de pessoas <b>neurodiversas.</b>
             </p>
 
             <p>
@@ -58,62 +58,62 @@ export function AboutSection(): React.ReactElement {
       <Section heading="Experiência Profissional">
         <div className={classes.ExperienceText}>
           <p>
-            Atuo como <u>psicóloga clínica</u>, com experiência em{" "}
-            <u>atendimentos presenciaise online</u> desde 2020, oferecendo um{" "}
-            <u>espaço seguro, de escuta ativa e livre de julgamentos</u>, onde
+            Atuo como <b>psicóloga clínica</b>, com experiência em{" "}
+            <b>atendimentos presenciaise online</b> desde 2020, oferecendo um{" "}
+            <b>espaço seguro, de escuta ativa e livre de julgamentos</b>, onde
             cada pessoa possa explorar seus sentimentos, dificuldades e
             potencial de crescimento.
           </p>
 
           <p>
             Ao longo da minha trajetória, tenho acompanhado{" "}
-            <u>adultos em diferentes fases da vida,</u> apoiando-os em questões
+            <b>adultos em diferentes fases da vida,</b> apoiando-os em questões
             como ansiedade, depressão, fobias sociais,{" "}
-            <u>
+            <b>
               autoestima, adaptação a mudanças significativas e desafios nos
               relacionamentos interpessoais.
-            </u>
+            </b>
           </p>
 
           <p>
             Minha experiência inclui a atuação no{" "}
-            <u>Centro de Contacto do Serviço Nacional de Saúde (SNS)</u>, onde
+            <b>Centro de Contacto do Serviço Nacional de Saúde (SNS)</b>, onde
             realizei acolhimento, triagem e orientação a utentes em situações de
             vulnerabilidade durante a pandemia, e no
-            <u>Centro de Recursos para a Inclusão da APPDA Lisboa,</u>
+            <b>Centro de Recursos para a Inclusão da APPDA Lisboa,</b>
             participando em projetos voltados à inclusão e ao desenvolvimento de
-            pessoas com <u>neurodiversidade,</u> promovendo treino de{" "}
-            <u>habilidades sociais, autonomia e qualidade de vida.</u>
+            pessoas com <b>neurodiversidade,</b> promovendo treino de{" "}
+            <b>habilidades sociais, autonomia e qualidade de vida.</b>
           </p>
 
           <p>
             Atuo também com atendimento online, oferecendo acompanhamento
-            maioritariamente a <u>pessoas emigrantes</u> e trabalhando com
+            maioritariamente a <b>pessoas emigrantes</b> e trabalhando com
             questões relacionadas a{" "}
-            <u>
+            <b>
               relacionamentos amorosos, perturbação de hiperatividade e défice
               de atenção, perturbação do comportamento alimentar
-            </u>{" "}
+            </b>{" "}
             entre outras especificidades. Essas experiências têm contribuído
             para um crescimento contínuo enquanto profissional, fortalecendo a
             capacidade de compreender e desenvolver{" "}
-            <u>planos terapêuticos personalizados</u> para cada paciente de
-            acordo <u>com o seu contexto e possibilidades.</u>
+            <b>planos terapêuticos personalizados</b> para cada paciente de
+            acordo <b>com o seu contexto e possibilidades.</b>
           </p>
 
           <p>
             Minha prática é guiada por um cuidado{" "}
-            <u>ético, humano e culturalmente sensível,</u> que valoriza a{" "}
-            <u>singularidade</u> de cada pessoa e busca promover{" "}
-            <u>
+            <b>ético, humano e culturalmente sensível,</b> que valoriza a{" "}
+            <b>singularidade</b> de cada pessoa e busca promover{" "}
+            <b>
               autoconhecimento, equilíbrio emocional e o fortalecimento dos
               recursos internos para lidar com os desafios da vida.
-            </u>
+            </b>
           </p>
 
           <p>
             Além disso, mantenho um compromisso constante com o estudo e a
-            atualização em técnicas <u>baseadas em evidências científicas,</u>
+            atualização em técnicas <b>baseadas em evidências científicas,</b>
             integrando essas abordagens ao processo terapêutico de forma
             individualizada e eficaz. Também participo regularmente de
             intervisão e supervisão clínica, reconhecendo esses espaços como

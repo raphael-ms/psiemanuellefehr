@@ -12,11 +12,14 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
     "gatsby": "^5.0.1",
+    "gatsby-plugin-canonical-urls": "^5.15.0",
+    "gatsby-plugin-robots-txt": "^1.8.0",
+    "gatsby-plugin-sitemap": "^6.15.0",
     "gatsby-theme-portfolio-minimal": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@splidejs/react-splide": "^0.7.12"
+    "react-dom": "^18.2.0"
   },
   "author": "Konstantin Münster <mail@konstantin.digital>",
   "license": "0BSD",

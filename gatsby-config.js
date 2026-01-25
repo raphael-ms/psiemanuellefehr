@@ -1,4 +1,7 @@
 module.exports = {
+  siteMetadata: {
+    siteUrl: "https://psimanufehr.com/",
+  },
   plugins: [
     {
       resolve: "gatsby-theme-portfolio-minimal",
@@ -23,6 +26,27 @@ module.exports = {
         //     anonymize: true, // Default true
         //     environments: ["production", "development"] // Default ["production"]
         // }
+      },
+    },
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-canonical-urls",
+      options: {
+        siteUrl: "https://psimanufehr.com",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://psimanufehr.com",
+        sitemap: "https://psimanufehr.com/sitemap-index.xml",
+        policy: [
+          {
+            userAgent: "*",
+            allow: "/",
+            disallow: ["/dev-404-page", "/404", "/404.html", "/offline-plugin-app-shell-fallback"],
+          },
+        ],
       },
     },
   ],

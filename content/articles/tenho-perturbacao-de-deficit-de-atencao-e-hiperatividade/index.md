@@ -2,6 +2,9 @@
 title: "Tenho Perturbação de Défice de Atenção e Hiperatividade (PHDA) ou só estou com a mente acelerada demais? Como identificar sinais e aprender estratégias para relaxar e aumentar o tempo de atenção."
 description: "No mundo atual, com excesso de informações, múltiplas tarefas e notificações a cada minuto, é comum sentir dificuldade para se concentrar. Mas como saber se isso é um transtorno de atenção ou apenas um momento de hiperestimulação? Entender essa diferença é essencial para encontrar equilíbrio e cuidar da saúde mental."
 date: "2025-10-08"
+slug: "/blog/tenho-perturbacao-de-deficit-de-atencao-e-hiperatividade"
+author: "Emanuelle Fehr"
+canonicalUrl: "https://psimanufehr.com/blog/tenho-perturbacao-de-deficit-de-atencao-e-hiperatividade"
 banner:
   src: "../../images/tdah.avif"
   alt: "Humano refletindo"

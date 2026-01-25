@@ -1,7 +1,10 @@
 ---
 title: "Autoestima: Como Ela se Forma e Como Fortalecê-la no Dia a Dia"
-description: " A autoestima é a base da nossa saúde emocional. Ela influencia nossas decisões, a forma como enfrentamos desafios, como nos posicionamos em relacionamentos e até mesmo como lidamos com a ansiedade. A boa notícia é que, embora seja moldada desde cedo, a autoestima pode ser fortalecida em qualquer fase da vida."
+description: "A autoestima é a base da nossa saúde emocional. Ela influencia nossas decisões, a forma como enfrentamos desafios, como nos posicionamos em relacionamentos e até mesmo como lidamos com a ansiedade. A boa notícia é que, embora seja moldada desde cedo, a autoestima pode ser fortalecida em qualquer fase da vida."
 date: "2025-11-30"
+slug: "/blog/autoestima-como-fortalecer"
+author: "Emanuelle Fehr"
+canonicalUrl: "https://psimanufehr.com/blog/autoestima-como-fortalecer"
 banner:
   src: "../../images/autoestima.avif"
   alt: "Mulher alegre"
@@ -9,12 +12,12 @@ categories:
   - "Cuidado"
   - "Autoestima"
 keywords:
-  - "Cuidado"
-  - "Austoestima"
+  - "Autoestima"
   - "Autocuidado"
   - "Psicologia Online"
   - "Ansiedade"
   - "Consulta Psicológica"
+  - "Confiança"
 ---
 
 Você já se pegou duvidando do seu valor ou sentindo que nunca é “bom o bastante”? Esses pensamentos não surgem do nada: eles estão ligados à forma como nossa **autoestima** foi construída ao longo da vida. Entender esse processo é o primeiro passo para mudar a maneira como nos vemos e, consequentemente, como nos relacionamos com o mundo.

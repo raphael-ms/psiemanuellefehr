@@ -33,7 +33,7 @@
 .ScheduleButton {
   cursor: pointer;
   width: auto;
-  height: 3rem;
+  min-height: 3rem;
   border-radius: var(--border-radius);
   border: 0.125rem solid var(--primary-color);
   background: var(--background-color);

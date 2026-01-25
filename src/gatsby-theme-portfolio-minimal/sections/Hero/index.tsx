@@ -53,12 +53,15 @@ export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
           <h2 className={classes.Subtitle}>{data.subtitle.prefix}</h2>
           <p>{data.description}</p>
           <Animation type="fadeLeft" delay={600}>
-            {data.socialProfiles && (
-              <SocialProfiles
-                from={data.socialProfiles.from}
-                showIcon={data.socialProfiles.showIcons}
-              />
-            )}
+            <button className={classes.ScheduleButton}>
+              <a
+                target="_blank"
+                href="https://api.whatsapp.com/message/X7NOGR2DKCOYP1?autoload=1&amp;app_absent=0"
+                rel="noopener noreferrer"
+              >
+                Agende uma sessão introdutória gratuita de 15 minutos
+              </a>
+            </button>
           </Animation>
         </div>
       </Section>

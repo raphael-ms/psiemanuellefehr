@@ -5,6 +5,7 @@ import {
 } from "gatsby-theme-portfolio-minimal";
 import { OnlineTherapy } from "../gatsby-theme-portfolio-minimal/components/OnlineTherapy";
 import { LocalBusinessSchema, PersonSchema } from "../gatsby-theme-portfolio-minimal/components/Schema";
+import { FloatingWhatsAppButton } from "../gatsby-theme-portfolio-minimal/components/FloatingWhatsAppButton";
 
 export default function IndexPage() {
   return (
@@ -22,7 +23,8 @@ export default function IndexPage() {
       />
       <Page>
         <OnlineTherapy sectionId="sobre" heading="Psicoterapia Online" />
-      </Page >
+      </Page>
+      <FloatingWhatsAppButton />
     </>
   );
 }

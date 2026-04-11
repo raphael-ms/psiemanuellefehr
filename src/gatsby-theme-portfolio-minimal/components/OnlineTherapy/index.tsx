@@ -1,28 +1,34 @@
 import React from "react";
-import { Animation } from "gatsby-theme-portfolio-minimal/src/components/Animation";
 import { Section } from "gatsby-theme-portfolio-minimal/src/components/Section";
 import * as classes from "./style.module.css";
 import { StaticImage } from "gatsby-plugin-image";
+import { AnimatedSection, StaggerContainer, StaggerItem } from "../AnimatedComponents";
 
 export function OnlineTherapy(): React.ReactElement {
   return (
-    <Animation type="fadeIn">
+    <>
       <Section anchor="about">
-        <div>
+      <div>
+        <AnimatedSection direction="up" delay={0.1}>
           <div className={classes.AboutImage}>
             <StaticImage
               src="../../../../content/images/terapia-online.avif"
-              alt="Foto de perfil da psicóloga"
+              alt="Terapia online - atendimento psicológico"
               placeholder="blurred"
               height={300}
               width={920}
+              imgStyle={{ borderRadius: 'var(--border-radius)' }}
             />
           </div>
+        </AnimatedSection>
+        <AnimatedSection direction="up" delay={0.3}>
           <div className={classes.AboutImageText}>
             <h1>Psicoterapia Online: cuidado e conexão no seu espaço</h1>
           </div>
+        </AnimatedSection>
 
-          <div className={classes.AboutText}>
+        <StaggerContainer className={classes.AboutText} staggerDelay={0.15}>
+          <StaggerItem>
             <ul>
               <li>
                 <p>
@@ -36,7 +42,9 @@ export function OnlineTherapy(): React.ReactElement {
                 </p>
               </li>
             </ul>
+          </StaggerItem>
 
+          <StaggerItem>
             <ul>
               <li>
                 <p>
@@ -52,7 +60,9 @@ export function OnlineTherapy(): React.ReactElement {
                 </p>
               </li>
             </ul>
+          </StaggerItem>
 
+          <StaggerItem>
             <ul>
               <li>
                 <p>
@@ -71,7 +81,9 @@ export function OnlineTherapy(): React.ReactElement {
                 </p>
               </li>
             </ul>
+          </StaggerItem>
 
+          <StaggerItem>
             <ul>
               <li>
                 <p>
@@ -95,6 +107,8 @@ export function OnlineTherapy(): React.ReactElement {
                 </p>
               </li>
             </ul>
+          </StaggerItem>
+          <StaggerItem>
             <button className={classes.ScheduleButton}>
               <a
                 target="_blank"
@@ -104,19 +118,22 @@ export function OnlineTherapy(): React.ReactElement {
                 Agende uma sessão introdutória gratuita de 15 minutos
               </a>
             </button>
-          </div>
-        </div>
-      </Section>
+          </StaggerItem>
+        </StaggerContainer>
+      </div>
+    </Section>
 
-      <Section heading="Abordagens Terapêuticas">
-        <div className={classes.ExperienceText}>
-          <StaticImage
-            className={classes.ExperienceImage}
-            src="../../../../content/images/trabalho-casa.avif"
-            alt="Foto de perfil da psicóloga"
-            placeholder="blurred"
-          />
-          <ul>
+    <Section anchor="abordagens" heading="Abordagens Terapêuticas">
+        <AnimatedSection direction="up" delay={0.2}>
+          <div className={classes.ExperienceText}>
+            <StaticImage
+              className={classes.ExperienceImage}
+              src="../../../../content/images/trabalho-casa.avif"
+              alt="Psicóloga trabalhando em casa - terapia online"
+              placeholder="blurred"
+              imgStyle={{ borderRadius: 'var(--border-radius)' }}
+            />
+            <ul>
             <li>
               <p>
                 Uma <strong>abordagem terapêutica</strong> é o{" "}
@@ -180,12 +197,15 @@ export function OnlineTherapy(): React.ReactElement {
             </button>
           </ul>
         </div>
+        </AnimatedSection>
+        <AnimatedSection direction="up" delay={0.4}>
         <div className={classes.SecondExperienceText}>
           <StaticImage
             className={classes.ExperienceImage}
             src="../../../../content/images/homem-laptop.avif"
-            alt="Foto de perfil da psicóloga"
+            alt="Homem usando laptop - psicoterapia online"
             placeholder="blurred"
+            imgStyle={{ borderRadius: 'var(--border-radius)' }}
           />
           <ul>
             <li>
@@ -254,9 +274,11 @@ export function OnlineTherapy(): React.ReactElement {
             </button>
           </ul>
         </div>
+        </AnimatedSection>
       </Section>
 
-      <Section heading="Terapia Cognitivo-Comportamental (TCC)">
+      <Section anchor="tcc" heading="Terapia Cognitivo-Comportamental (TCC)">
+        <AnimatedSection direction="up" delay={0.2}>
         <div className={classes.tcc}>
           <ul>
             <li>
@@ -340,7 +362,8 @@ export function OnlineTherapy(): React.ReactElement {
             </li>
           </ul>
         </div>
+        </AnimatedSection>
       </Section>
-    </Animation>
+    </>
   );
 }

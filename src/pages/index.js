@@ -9,6 +9,7 @@ import { ContactSection } from "../gatsby-theme-portfolio-minimal/sections/Conta
 import { ProjectsSection } from "../gatsby-theme-portfolio-minimal/sections/Projects";
 import { TestimonialSection } from "../gatsby-theme-portfolio-minimal/sections/Testimonials";
 import { LocalBusinessSchema, PersonSchema } from "../gatsby-theme-portfolio-minimal/components/Schema";
+import { FloatingWhatsAppButton } from "../gatsby-theme-portfolio-minimal/components/FloatingWhatsAppButton";
 
 export default function IndexPage() {
   return (
@@ -30,7 +31,8 @@ export default function IndexPage() {
         <TestimonialSection sectionId="depoimentos" heading="Depoimentos" />
         <ProjectsSection sectionId="servicos" heading="Serviços" />
         <ContactSection sectionId="contato" heading="Contato" />
-      </Page >
+      </Page>
+      <FloatingWhatsAppButton />
     </>
   );
 }

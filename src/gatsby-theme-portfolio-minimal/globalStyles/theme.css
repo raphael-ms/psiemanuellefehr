@@ -1,3 +1,5 @@
+@import './animations.css';
+
 body[data-theme='lightTheme'] {
   --primary-color: #093300;          /* muted rose / wine */
   --secondary-color: #0933002b;        /* very light blush background */

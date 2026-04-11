@@ -5,6 +5,7 @@ import {
 } from "gatsby-theme-portfolio-minimal";
 import { AboutSection } from "../gatsby-theme-portfolio-minimal/components/About";
 import { PersonSchema } from "../gatsby-theme-portfolio-minimal/components/Schema";
+import { FloatingWhatsAppButton } from "../gatsby-theme-portfolio-minimal/components/FloatingWhatsAppButton";
 
 export default function IndexPage() {
   return (
@@ -17,7 +18,8 @@ export default function IndexPage() {
       />
       <Page>
         <AboutSection sectionId="hero" />
-      </Page >
+      </Page>
+      <FloatingWhatsAppButton />
     </>
   );
 }

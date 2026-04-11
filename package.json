@@ -16,6 +16,7 @@
     "framer-motion": "^12.38.0",
     "gatsby": "^5.0.1",
     "gatsby-plugin-canonical-urls": "^5.15.0",
+    "gatsby-plugin-google-gtag": "^5.16.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sitemap": "^6.15.0",
     "gatsby-theme-portfolio-minimal": "latest",

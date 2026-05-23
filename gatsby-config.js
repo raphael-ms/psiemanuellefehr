@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://psimanufehr.com/",
+    siteUrl: "https://www.psimanufehr.com/",
   },
   plugins: [
     {
       resolve: "gatsby-theme-portfolio-minimal",
       options: {
-        siteUrl: "https://psimanufehr.com/", // Used for sitemap generation
+        siteUrl: "https://www.psimanufehr.com/", // Used for sitemap generation
         manifestSettings: {
           favicon: "./content/images/favicon.png", // Path is relative to the root
           siteName: "Emanuelle Fehr . psicologa", // Used in manifest.json
@@ -50,14 +50,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
-        siteUrl: "https://psimanufehr.com",
+        siteUrl: "https://www.psimanufehr.com",
       },
     },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://psimanufehr.com",
-        sitemap: "https://psimanufehr.com/sitemap-index.xml",
+        host: "https://www.psimanufehr.com",
+        sitemap: "https://www.psimanufehr.com/sitemap-index.xml",
         policy: [
           {
             userAgent: "*",

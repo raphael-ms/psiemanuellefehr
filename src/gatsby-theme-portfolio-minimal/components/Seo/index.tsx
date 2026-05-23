@@ -13,6 +13,10 @@ interface SeoProps {
 export function Seo(props: Readonly<SeoProps>): React.ReactElement {
   const location = useLocation();
   const siteMetadata = { ...useSiteMetadata(), ...props };
+  const canonicalUrl = (siteMetadata.siteUrl + location.pathname).replaceAll(
+    /([^:]\/)\/+/g,
+    "$1"
+  );
 
   const thumbnailUrl = siteMetadata.thumbnail
     ? (
@@ -33,11 +37,9 @@ export function Seo(props: Readonly<SeoProps>): React.ReactElement {
       <meta name="description" content={siteMetadata.description} />
       <meta property="og:title" content={siteMetadata.title} />
       <meta property="og:site_name" content={siteMetadata.title} />
-      <meta
-        property="og:url"
-        content={siteMetadata.siteUrl + location.pathname}
-      />
+      <meta property="og:url" content={canonicalUrl} />
       {thumbnailUrl && <meta property="og:image" content={thumbnailUrl} />}
+      <link rel="canonical" href={canonicalUrl} />
       <meta name="google-site-verification" content="l6cC7Q-QvO0ehFInMUDsweWJxlJOabT7DNdsZsnhaBM" />
       <meta property="og:description" content={siteMetadata.description} />
       <meta property="og:type" content="website" />

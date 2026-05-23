@@ -10,10 +10,14 @@ import { FloatingWhatsAppButton } from "../gatsby-theme-portfolio-minimal/compon
 export default function IndexPage() {
   return (
     <>
-      <Seo title="Psicóloga Online | Terapia Cognitivo-Comportamental | Emanuelle Fehr | Sobre Mim" noIndex={false} />
+      <Seo
+        title="Psicóloga Online | Terapia Cognitivo-Comportamental | Emanuelle Fehr | Sobre Mim"
+        description="Conheça a formação e experiência clínica da psicóloga Emanuelle Fehr em Terapia Cognitivo-Comportamental e acompanhamento psicológico online."
+        noIndex={false}
+      />
       <PersonSchema 
         name="Emanuelle Fehr"
-        url="https://psimanufehr.com/about"
+        url="https://www.psimanufehr.com/about"
         description="Psicóloga com formação em Terapia Cognitivo-Comportamental. Especialista em ansiedade, depressão, TDAH e desenvolvimento pessoal."
       />
       <Page>

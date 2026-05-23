@@ -1,35 +1,26 @@
 # IMMEDIATE ACTIONS - Google SEO Setup
 ## psimanufehr.com
 
-**Status:** ⚠️ No Google API access - Running on Tier 0  
-**Goal:** Achieve Tier 2 (Full GSC + CrUX + GA4 coverage) within 5 days
+**Status:** ⚠️ Partial setup complete - GSC verified, API/reporting setup pending  
+**Goal:** Achieve Tier 2 (Full GSC + CrUX + GA4 coverage)
+
+---
+
+## ✅ COMPLETED (May 23, 2026)
+
+1. Google Search Console verified (per project note)
+2. Core page meta descriptions added
+3. Social meta tags (Open Graph/Twitter) present in shared SEO component
+4. Canonical host standardized to `www.psimanufehr.com`
+5. Schema URLs aligned to canonical host
 
 ---
 
 ## 🚨 CRITICAL ACTIONS (Do Today)
 
-### 1. Verify Google Search Console
-**Time:** 5 minutes + 24-48 hour DNS wait  
-**URL:** https://search.google.com/search-console
-
-```
-1. Add property: psimanufehr.com (Domain type)
-2. Copy DNS TXT record
-3. Add to DNS provider
-4. Wait for verification
-```
-
-### 2. Add Missing Meta Descriptions
-**Time:** 15 minutes  
-**Impact:** CRITICAL for SERP CTR
-
-Add to `<head>` of all pages:
-```html
-<meta name="description" content="Psicoterapia online com Emanuelle Fehr, especialista em TCC. Atendimento para ansiedade, depressão, TDAH. Agende sessão gratuita de 15 minutos.">
-```
-
-### 3. Add Social Meta Tags
-**Time:** 10 minutes
+### 1. Add dedicated social preview images
+**Time:** 20-30 minutes
+**Impact:** Better CTR and sharing quality
 
 ```html
 <!-- Open Graph (Facebook, LinkedIn) -->
@@ -45,6 +36,16 @@ Add to `<head>` of all pages:
 ```
 
 **Note:** Create og-image.jpg (1200x630px) and twitter-image.jpg (1200x600px)
+
+### 2. Confirm GSC property scope and preferred domain
+**Time:** 5 minutes
+**Impact:** Prevents split data between hosts
+
+```
+1. Confirm Domain property includes both www and non-www
+2. Ensure canonical host remains https://www.psimanufehr.com/
+3. Submit canonical sitemap URL in GSC
+```
 
 ---
 
@@ -114,7 +115,7 @@ python3 scripts/ga4_report.py --property <YOUR_ID> --json
 
 ## 🎯 SUCCESS CRITERIA
 
-**Tier 0 → Tier 1:** ✅ When `google_auth.py --check` shows:
+**Tier 0 → Tier 1:** ✅ When API checks show:
 ```json
 {
   "tier": 1,
@@ -162,9 +163,9 @@ If you encounter issues:
 ---
 
 **Checklist:**
-- [ ] GSC domain verified
-- [ ] Meta descriptions added
-- [ ] Social meta tags added
+- [x] GSC domain verified
+- [x] Meta descriptions added
+- [x] Social meta tags added
 - [ ] Cloud project created
 - [ ] Service account created & added to GSC
 - [ ] API key created
@@ -173,5 +174,5 @@ If you encounter issues:
 - [ ] Test commands pass
 - [ ] First report generated
 
-**Target Completion:** May 28, 2026 (5 days)
+**Updated Target Completion:** May 30, 2026
 

@@ -13,7 +13,7 @@ export function PersonSchema(props: Readonly<PersonSchemaProps>): React.ReactEle
     "@context": "https://schema.org/",
     "@type": "Person",
     name: props.name || "Emanuelle Fehr",
-    url: props.url || "https://psimanufehr.com",
+    url: props.url || "https://www.psimanufehr.com",
     ...(props.image && { image: props.image }),
     description: props.description || "Psicóloga especialista em Terapia Cognitivo-Comportamental",
     jobTitle: "Psicóloga",

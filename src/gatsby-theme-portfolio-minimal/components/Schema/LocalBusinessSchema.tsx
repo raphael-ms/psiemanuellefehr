@@ -11,15 +11,15 @@ interface LocalBusinessSchemaProps {
 export function LocalBusinessSchema(props: Readonly<LocalBusinessSchemaProps>): React.ReactElement {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     "@id": props.url,
     name: props.name || "Emanuelle Fehr - Psicóloga",
     description: props.description || "Serviços de psicoterapia online com especialização em Terapia Cognitivo-Comportamental",
-    url: props.url || "https://psimanufehr.com",
+    url: props.url || "https://www.psimanufehr.com",
     ...(props.telephone && { telephone: props.telephone }),
     ...(props.email && { email: props.email }),
     priceRange: "$",
-    areaServed: "BR",
+    areaServed: "PT",
     serviceType: ["Psicoterapia", "Terapia Cognitivo-Comportamental", "Aconselhamento Psicológico"],
     knowsAbout: ["Ansiedade", "Depressão", "TDAH", "Autoestima", "Relacionamentos", "Stress"],
   };

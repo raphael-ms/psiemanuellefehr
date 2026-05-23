@@ -1,108 +1,172 @@
+/* ── Testimonials: editorial magazine style ───────────────────────────── */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+.testimonial-container {
+  position: relative;
+}
+
 .slider-container {
   position: relative;
   user-select: none;
-  padding-inline: 1rem;
+  padding-inline: 0;
 }
 
-.splide__arrow svg {
-    fill: var(--primary-color) !important;
-}
-
+/* Quote mark — large, decorative */
 .slider-container .quote {
   position: absolute;
-  color: var(--primary-color);
+  width: 56px;
+  height: 56px;
+  opacity: 0.18;
+  filter: invert(0) sepia(0);
+}
+
+/* Re-tint quote SVG using CSS filter to match primary-color */
+body[data-theme='lightTheme'] .slider-container .quote {
+  filter: invert(13%) sepia(80%) saturate(800%) hue-rotate(90deg);
+}
+
+body[data-theme='darkTheme'] .slider-container .quote {
+  filter: invert(85%) sepia(25%) saturate(400%) hue-rotate(90deg);
+  opacity: 0.25;
 }
 
 .slider-container .top-quote {
   position: absolute;
-  top: -1rem;
-  left: -1rem;
+  top: -24px;
+  left: 24px;
+  z-index: 2;
 }
 
 .slider-container .bottom-quote {
   position: absolute;
-  bottom: -3rem;
-  right: -0.5rem;
+  bottom: -18px;
+  right: 24px;
   transform: rotate(180deg);
+  z-index: 2;
 }
 
-/* Splide customization */
+/* Splide track */
 .splide__track {
-  border-radius: 1rem;
-  box-shadow: 0 12px 24px var(--box-shadow-color);
+  border-radius: 0;
+  box-shadow: none;
 }
 
+/* Individual slide */
 .splide__slide {
   display: flex;
-  align-items: center;
-  background-color:var(--background-color);
-  padding: 3rem 1.875rem;
-  border-radius: 1rem;
-  gap: 1rem;
+  align-items: flex-start;
+  flex-direction: column;
+  background: var(--card-background-color);
+  padding: 3.5rem 3.5rem 3rem;
+  border-radius: 4px;
+  border-left: 4px solid var(--primary-color);
+  gap: 1.5rem;
+  box-shadow: 0 2px 20px var(--box-shadow-color);
+  transition: box-shadow 0.3s ease;
 }
 
+.splide__slide:hover {
+  box-shadow: 0 8px 32px var(--box-shadow-hover-color);
+}
+
+/* Testimonial text */
 .slider-container .content .text {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-family: var(--heading-font);
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
   overflow: auto;
-  max-height: 60vh;
+  max-height: 55vh;
 }
 
+/* Attribution */
 .slider-container .content .user {
-  font-weight: 600;
+  font-family: var(--base-font);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary-color);
 }
 
 .info {
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--base-font);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--subtext-color);
 }
 
-
+/* Arrows */
 .splide__arrow {
   position: absolute;
-  background-color: unset;
+  background: var(--primary-color);
   border: none;
-  font-size: 2rem;
-  font-weight: 300;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.splide__arrow:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.06);
+}
+
+.splide__arrow svg {
+  fill: var(--background-color) !important;
+  width: 1rem;
+  height: 1rem;
 }
 
 .splide__arrow--prev {
   top: 50%;
-  left: -3.5rem;
-  background-color: transparent;
-    color: var(--primary-color);
+  left: -3rem;
+  transform: translateY(-50%);
 }
 
 .splide__arrow--next {
   top: 50%;
-  right: -3.5rem;
-  background-color: transparent;
+  right: -3rem;
+  transform: translateY(-50%);
 }
 
+/* Pagination dots */
 .splide__pagination__page {
-  height: 10px;
-  width: 10px;
-  opacity: 1;
+  height: 6px;
+  width: 6px;
+  border-radius: 3px;
+  background: var(--subtext-color);
+  opacity: 0.35;
+  transition: width 0.3s ease, opacity 0.3s ease;
 }
 
-/* Media Query */
+.splide__pagination__page.is-active {
+  width: 22px;
+  opacity: 1;
+  background: var(--primary-color);
+}
+
+/* Mobile */
 @media (max-width: 576px) {
   .splide__slide {
-    display: block;
-    text-align: center;
+    padding: 2.5rem 2rem 2rem;
+    border-left: 3px solid var(--primary-color);
   }
 
-  .splide__arrow {
-    font-size: 1.5rem;
-  }
-
-  .slider-container .bottom-quote {
-    right: 0;
-  }
+  .splide__arrow--prev { left: -1rem; }
+  .splide__arrow--next { right: -1rem; }
 }

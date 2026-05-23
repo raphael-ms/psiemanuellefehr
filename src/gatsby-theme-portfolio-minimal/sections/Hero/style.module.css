@@ -1,162 +1,269 @@
+/* ── Hero: editorial, full-bleed, Lando-Norris-inspired ─────────────────── */
+
 .HeroContainer {
-    display: flex;
-        background-image: url(https://static.expo.dev/static/home/9-2025/splash-bg.webp);
-    border-radius: 24px;
-    box-shadow: 0 12px 24px var(--box-shadow-color);
-    padding: 5rem 2rem;
-    min-width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    min-height: calc(100vh - 4rem);
+    width: 100%;
+    background: var(--background-color);
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
 }
 
+/* Left column: text */
 .Hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 50vh;
+    padding: 5rem 4rem 5rem 0;
+    position: relative;
+    z-index: 2;
 }
 
-.ScheduleButton {
-  cursor: pointer;
-  width: auto;
-  min-height: 3rem;
-  border-radius: var(--border-radius);
-  border: 0.125rem solid var(--primary-color);
-  background: var(--background-color);
-  padding: 0.5rem 1.5rem;  
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: 2rem;
-  position: relative;
-  overflow: hidden;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s ease;
-  }
-  
-  &:hover::before {
-    left: 100%;
-  }
-  
-  & a {
-    font-size: 1rem;
-    font-weight: 700;
-    text-align: center;
-    color: var(--primary-color);
-    transition: color 0.3s ease;
-  }
-}
-
-.ScheduleButton:hover {
-  background: var(--primary-color);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
-  
-  & a {
-    color: var(--background-color);
-  }
-}
-
-.Hero .Title {
-    margin: 0 0 1.5rem 0;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 2.375rem;
-}
-
-.Hero .Subtitle {
-    font-weight: 700;
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-}
-
-.Hero p {
-    font-size: 1.125rem;
-    margin-bottom: 2rem;
-}
-
+/* Eyebrow label */
 .Intro {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
 }
 
 .ImagePrefix {
     display: inline-block;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 3rem;
-    color: var(--primary-color);
+    font-family: var(--base-font);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 999px;
 }
 
 .Image {
     display: inline-block;
-    margin-left: 1rem;
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
     transform-origin: 70% 70%;
-}
-
-@media (min-width: 768px) {
-    .Hero .Title {
-        font-size: 2.625rem;
-        line-height: 3rem;
-        margin-bottom: 0;
-    }
-
-    .Hero .Subtitle {
-        font-size: 1.6rem;
-        line-height: 2rem;
-    }
-
-    .ImagePrefix {
-        font-size: 2.625rem;
-        line-height: 4rem;
-    }
-
-    .Image {
-        width: 48px;
-        height: 48px;
-    }
-}
-
-.heroImageCont {
-    flex: 40%;
     flex-shrink: 0;
+}
+
+/* Main heading — editorial, huge, serif */
+.Hero .Title {
+    font-family: var(--heading-font);
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text-color);
+    margin: 0 0 1.5rem 0;
+}
+
+.Hero .Title u {
+    text-decoration: none;
+    display: block;
+    color: var(--primary-color);
+    font-style: italic;
+    position: relative;
+}
+
+.Hero .Title u::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 60%;
+    background: var(--accent-color);
+    margin-top: 0.3rem;
+    border-radius: 2px;
+    animation: lineReveal 0.8s 1.4s both ease-out;
+    transform-origin: left;
+}
+
+@keyframes lineReveal {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+}
+
+/* Subtitle */
+.Hero .Subtitle {
+    font-family: var(--base-font);
+    font-size: clamp(1rem, 1.8vw, 1.4rem);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--subtext-color);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.01em;
+}
+
+/* Body copy */
+.Hero p {
+    font-family: var(--base-font);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--subtext-color);
+    margin-bottom: 2.5rem;
+    max-width: 46ch;
+}
+
+/* CTA button — editorial pill style */
+.ScheduleButton {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: fit-content;
+    border: none;
+    background: var(--primary-color);
+    padding: 1rem 2.2rem;
+    border-radius: 3px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '→';
+        font-size: 1.1rem;
+        transition: transform 0.3s ease;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    & a {
+        font-family: var(--base-font);
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--background-color);
+        transition: color 0.3s ease;
+    }
+}
+
+.ScheduleButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(15, 61, 15, 0.35);
+
+    &::after {
+        transform: translateX(4px);
+    }
+}
+
+/* Right column: photo */
+.heroImageCont {
+    position: relative;
+    overflow: hidden;
     width: 100%;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 0 1rem 3rem 0;
+    height: 100%;
+    min-height: 500px;
+}
+
+.heroImageCont::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, transparent 50%);
+    opacity: 0.12;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .heroImageCont .heroImage {
     width: 100%;
-    border-radius: var(--border-radius);
-    box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.16);
-    filter: grayscale(20%) contrast(1) brightness(90%);
-    transition: transform 0.3s ease;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(1.05) brightness(0.95);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.heroImage:hover{
-    transform: perspective(700px) scale(1.05);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+.heroImageCont:hover .heroImage {
+    transform: scale(1.03);
 }
 
-@media (max-width: 768px) {
-    .heroImageCont {
-        padding: 0 0 2rem 0;
-    }
+/* Decorative vertical text strip */
+.heroImageCont::after {
+    content: 'PSICÓLOGA · TCC · ONLINE';
+    position: absolute;
+    bottom: 2rem;
+    right: -2.5rem;
+    writing-mode: vertical-rl;
+    font-family: var(--base-font);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    z-index: 2;
+}
 
+/* Scroll indicator */
+.scrollHint {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--base-font);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--subtext-color);
+    opacity: 0.7;
+}
+
+.scrollHint::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 2rem;
+    background: var(--subtext-color);
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50%       { opacity: 1;   transform: scaleY(0.6); }
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
     .HeroContainer {
-        flex-direction: column;
-        margin-bottom: 50px;
+        grid-template-columns: 1fr;
+        min-height: auto;
     }
+
+    .heroImageCont {
+        order: -1;
+        min-height: 50vw;
+        max-height: 460px;
+    }
+
+    .heroImageCont::after { display: none; }
 
     .Hero {
-        display: block;
+        padding: 3rem 2rem;
     }
+
+    .Hero .Title {
+        font-size: clamp(2.2rem, 7vw, 3.5rem);
+    }
+
+    .scrollHint { display: none; }
+}
+
+@media (max-width: 480px) {
+    .Hero .Title { font-size: 2rem; }
+    .ScheduleButton { width: 100%; justify-content: center; }
 }

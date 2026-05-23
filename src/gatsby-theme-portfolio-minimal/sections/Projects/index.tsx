@@ -1,6 +1,5 @@
 import React from 'react';
 import { Section } from 'gatsby-theme-portfolio-minimal/src/components/Section';
-import { Slider } from 'gatsby-theme-portfolio-minimal/src/components/Slider';
 import { Button, ButtonType } from 'gatsby-theme-portfolio-minimal/src/components/Button';
 import { Project } from 'gatsby-theme-portfolio-minimal/src/components/Project';
 import { PageSection } from 'gatsby-theme-portfolio-minimal/src/types';
@@ -15,7 +14,7 @@ export function ProjectsSection(props: Readonly<PageSection>): React.ReactElemen
     return (
         <Section anchor={props.sectionId} heading={props.heading}>
             <StaggerContainer staggerDelay={0.2}>
-                <Slider additionalClasses={[classes.Projects]}>
+                <div className={classes.Projects}>
                     {data.projects.map((project, key) => {
                         return project.visible ? (
                             <StaggerItem key={project.title + key}>
@@ -23,11 +22,10 @@ export function ProjectsSection(props: Readonly<PageSection>): React.ReactElemen
                             </StaggerItem>
                         ) : null;
                     })}
-                </Slider>
+                </div>
             </StaggerContainer>
             {data.button !== undefined && data.button.visible !== false && (
                 <AnimatedSection className={classes.MoreProjects} direction="up" delay={0.4}>
-                    <div>teste</div>
                     <Button
                         type={ButtonType.LINK}
                         externalLink={true}

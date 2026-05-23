@@ -48,12 +48,6 @@ module.exports = {
     },
     "gatsby-plugin-sitemap",
     {
-      resolve: "gatsby-plugin-canonical-urls",
-      options: {
-        siteUrl: "https://www.psimanufehr.com",
-      },
-    },
-    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://www.psimanufehr.com",

@@ -5,13 +5,22 @@
     width: 100%;
     height: auto;
     min-height: 4rem;
-    background: var(--background-color);
+    background: rgba(245, 243, 240, 0.82);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-bottom: 1px solid rgba(15, 61, 15, 0.08);
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-.ContentWrapper  {
+body[data-theme='darkTheme'] .Header {
+    background: rgba(14, 22, 18, 0.88);
+    border-bottom: 1px solid rgba(168, 213, 181, 0.1);
+}
+
+.ContentWrapper  {
     width: 100%;
     height: 100%;
     max-width: var(--page-width);
@@ -42,7 +51,7 @@
 .Burger div {
     position: relative;
     width: 2rem;
-    height: 0.25rem;
+    height: 0.2rem;
     background: var(--primary-color);
     border-radius: 0.625rem;
     transition: all 0.3s ease-in-out;
@@ -60,6 +69,7 @@
 
 .Burger div:nth-child(3) {
     transform: rotate(0);
+    width: 1.3rem;  /* shorter last bar for style */
 }
 
 .TopNavigationBar {
@@ -67,31 +77,43 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--background-color);
+    gap: 0;
+    background: transparent;
 }
 
 .TopNavigationBar a {
     position: relative;
-    font-size: 1rem;
-    font-weight: 700;
+    font-family: var(--base-font);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     text-align: center;
-    color: var(--primary-color);
+    color: var(--text-color);
     padding: 0;
-    margin-right: 4rem;
+    margin-right: 3rem;
+    opacity: 0.75;
+    transition: opacity 0.2s ease, color 0.2s ease;
 }
 
 .TopNavigationBar a:last-child {
     margin-right: 0;
 }
 
+.TopNavigationBar a:hover {
+    opacity: 1;
+}
+
 .TopNavigationBar a.NavLink::before {
     content: '';
     position: absolute;
-    height: 0.1563rem;
+    height: 0.125rem;
     width: 0%;
-    bottom: -0.125rem;
+    bottom: -0.25rem;
+    left: 0;
     background-color: var(--primary-color);
-    transition: 200ms ease-out;
+    transition: width 0.25s ease-out;
+    border-radius: 2px;
 }
 
 .TopNavigationBar a.NavLink:hover::before {
@@ -99,18 +121,22 @@
 }
 
 .TopNavigationBar a.CtaButton {
-    width: auto;
-    height: auto;
-    border-radius: var(--border-radius);
-    border: 0.125rem solid var(--primary-color);
-    background: var(--background-color);
-    padding: 0.5rem 1.5rem;
-    transition: 20ms ease-out;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    opacity: 1;
+    background: var(--primary-color);
+    color: var(--background-color) !important;
+    padding: 0.6rem 1.5rem;
+    border-radius: 3px;
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .TopNavigationBar a.CtaButton:hover {
-    background: var(--primary-color);
-    color: var(--background-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(15, 61, 15, 0.28);
+    opacity: 1;
 }
 
 .SideBarWrapper {
@@ -140,24 +166,38 @@
     width: 55%;
     text-align: left;
     padding: 2rem;
+    border-left: 1px solid var(--tertiary-color);
 }
 
 .SideNavigationBar a {
-    font-size: 1.5rem;
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
     font-weight: 700;
+    font-style: italic;
     text-align: center;
     color: var(--primary-color);
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--tertiary-color);
+}
+
+.SideNavigationBar a:last-child {
+    border-bottom: none;
 }
 
 .SideNavigationBar a.CtaButton {
-    width: auto;
-    height: auto;
-    border-radius: var(--border-radius);
-    border: 0.125rem solid var(--primary-color);
-    background: var(--background-color);
+    font-family: var(--base-font);
+    font-style: normal;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: var(--primary-color);
+    color: var(--background-color) !important;
     padding: 1rem 1.5rem;
-    margin: 1.5rem auto;
+    border-radius: 3px;
+    border: none;
+    margin: 1.5rem auto 0;
+    width: fit-content;
+    min-width: 70%;
 }
 
 .SideBarBackdrop {

@@ -16,8 +16,7 @@ export function AboutSection(): React.ReactElement {
                 src="../../../../content/images/emanuelle-about.avif"
                 alt="Foto de perfil da psicóloga"
                 placeholder="blurred"
-                width={320}
-                height={320}
+                className={classes.AboutImageAsset}
                 style={{ transition: 'transform 0.3s ease' }}
                 imgStyle={{ borderRadius: 'var(--border-radius)' }}
               />
@@ -94,9 +93,9 @@ export function AboutSection(): React.ReactElement {
               Minha experiência inclui a atuação no{" "}
               <b>Centro de Contacto do Serviço Nacional de Saúde (SNS)</b>, onde
               realizei acolhimento, triagem e orientação a utentes em situações de
-              vulnerabilidade durante a pandemia, e no
+              vulnerabilidade durante a pandemia, e no{" "}
               <b>Centro de Recursos para a Inclusão da APPDA Lisboa,</b>
-              participando em projetos voltados à inclusão e ao desenvolvimento de
+              {" "}participando em projetos voltados à inclusão e ao desenvolvimento de
               pessoas com <b>neurodiversidade,</b> promovendo treino de{" "}
               <b>habilidades sociais, autonomia e qualidade de vida.</b>
             </p>
@@ -134,7 +133,7 @@ export function AboutSection(): React.ReactElement {
           <StaggerItem>
             <p>
               Além disso, mantenho um compromisso constante com o estudo e a
-              atualização em técnicas <b>baseadas em evidências científicas,</b>
+              atualização em técnicas{" "}<b>baseadas em evidências científicas,</b>{" "}
               integrando essas abordagens ao processo terapêutico de forma
               individualizada e eficaz. Também participo regularmente de
               intervisão e supervisão clínica, reconhecendo esses espaços como

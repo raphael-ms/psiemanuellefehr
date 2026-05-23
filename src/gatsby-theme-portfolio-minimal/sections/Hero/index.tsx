@@ -13,50 +13,33 @@ export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
   const response = useLocalDataSource();
   const data = response.allHeroJson.sections[0];
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, 150]);
-  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const imgScale = useTransform(scrollY, [0, 600], [1, 1.08]);
+  const textY = useTransform(scrollY, [0, 900], [0, 72]);
+  const textOpacity = useTransform(scrollY, [0, 1100], [1, 0.35]);
+  const scrollHintOpacity = useTransform(scrollY, [0, 850], [1, 0.2]);
 
   return (
     <Section
       anchor={props.sectionId}
       additionalClasses={[classes.HeroContainer]}
     >
-      {data.heroPhoto?.src && (
-        <motion.div 
-          className={classes.heroImageCont}
-          style={{ y, opacity }}
-        >
-          <motion.div
-            initial={{ scale: 1.2, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1.2, ease: [0.25, 0.4, 0.25, 1] }}
-          >
-            <GatsbyImage
-              className={classes.heroImage}
-              image={data.heroPhoto.src.childImageSharp.gatsbyImageData}
-              alt={data.heroPhoto.alt || `Profile Image`}
-              loading="eager"
-            />
-          </motion.div>
-        </motion.div>
-      )}
-      <motion.div 
+      {/* ── Left: text column ─────────────────────── */}
+      <motion.div
         className={classes.Hero}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
+        style={{ y: textY, opacity: textOpacity }}
       >
-        <motion.div 
+        {/* Eyebrow */}
+        <motion.div
           className={classes.Intro}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
           {data.intro && (
             <span className={classes.ImagePrefix}>{data.intro}</span>
           )}
           {data.image?.src && (
-            <FloatingElement duration={3} yOffset={8}>
+            <FloatingElement duration={3} yOffset={6}>
               <Animation
                 className={classes.Image}
                 type="waving-hand"
@@ -72,42 +55,47 @@ export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
             </FloatingElement>
           )}
         </motion.div>
-        <motion.h1 
+
+        {/* Heading */}
+        <motion.h1
           className={classes.Title}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
+          transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
           Sou a<u>{data.title}</u>
         </motion.h1>
-        <motion.h2 
+
+        {/* Subtitle */}
+        <motion.h2
           className={classes.Subtitle}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
+          transition={{ duration: 0.8, delay: 0.65 }}
         >
           {data.subtitle.prefix}
         </motion.h2>
+
+        {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.1 }}
+          transition={{ duration: 0.8, delay: 0.85 }}
         >
           {data.description}
         </motion.p>
+
+        {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 1.3 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.05 }}
         >
-          <motion.button 
+          <motion.button
             className={classes.ScheduleButton}
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.2)"
-            }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: "spring", stiffness: 400, damping: 20 }}
           >
             <a
               target="_blank"
@@ -118,7 +106,38 @@ export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
             </a>
           </motion.button>
         </motion.div>
+
+        {/* Scroll hint */}
+        <motion.div
+          className={classes.scrollHint}
+          style={{ opacity: scrollHintOpacity }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.8 }}
+        >
+          Scroll
+        </motion.div>
       </motion.div>
+
+      {/* ── Right: photo column ───────────────────── */}
+      {data.heroPhoto?.src && (
+        <motion.div
+          className={classes.heroImageCont}
+          initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
+          animate={{ opacity: 1, clipPath: "inset(0 0% 0 0)" }}
+          transition={{ duration: 1.1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <motion.div style={{ scale: imgScale, height: "100%" }}>
+            <GatsbyImage
+              className={classes.heroImage}
+              image={data.heroPhoto.src.childImageSharp.gatsbyImageData}
+              alt={data.heroPhoto.alt || `Profile Image`}
+              loading="eager"
+            />
+          </motion.div>
+        </motion.div>
+      )}
     </Section>
   );
 }
+

@@ -1,14 +1,32 @@
+/* ── Footer: editorial dark strip ──────────────────────────────────────── */
 .Footer {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
     height: auto;
-    min-height: var(--footer-height);
-    background: var(--primary-color);
-    border-top: none;
-    margin-top: 2rem;
-    padding: 2rem 0 3rem 0;
+    background: #0a1c0c;
+    margin-top: 4rem;
+    padding: 3.5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle decorative background text */
+.Footer::before {
+    content: 'EMANUELLE FEHR';
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1rem;
+    font-family: var(--heading-font);
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 900;
+    font-style: italic;
+    color: rgba(255,255,255,0.035);
+    pointer-events: none;
+    white-space: nowrap;
+    letter-spacing: -0.02em;
+    line-height: 1;
 }
 
 .ContentWrapper {
@@ -17,46 +35,43 @@
     max-width: var(--page-width);
     margin: 0 auto;
     padding: var(--page-padding);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .Links {
     width: auto;
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
+    text-align: right;
 }
 
+.Links span,
 .Links a {
-    font-size: 0.875rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--background-color);
-    letter-spacing: 1px;
-    margin-right: 2rem;
+    font-family: var(--base-font);
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+    line-height: 1.6;
 }
 
-.Links a:last-child {
-    margin-right: 0;
+.Links a:hover {
+    color: rgba(255, 255, 255, 0.7);
 }
 
-@media (min-width: 768px) {
-    .Footer {
-        padding: 0;
-    }
+@media (max-width: 640px) {
     .ContentWrapper {
-        flex-direction: row;
-        align-items: center;
+        grid-template-columns: 1fr;
+        text-align: center;
     }
     .Links {
-        gap: 0;
-    }
-    .Links a {
-        margin-right: 4rem;
+        text-align: center;
+        align-items: center;
     }
 }

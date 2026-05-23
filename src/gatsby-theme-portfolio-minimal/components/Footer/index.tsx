@@ -2,44 +2,46 @@ import React from 'react';
 
 
 import { Link } from 'gatsby-theme-portfolio-minimal/src/components/Link';
-import { Theme, useGlobalState } from 'gatsby-theme-portfolio-minimal/src/context';
+import { Theme } from 'gatsby-theme-portfolio-minimal/src/context';
 import { useSiteConfiguration } from 'gatsby-theme-portfolio-minimal/src//hooks/useSiteConfiguration';
+// @ts-ignore
 import * as classes from './style.module.css';
 import { Logo } from 'gatsby-theme-portfolio-minimal/src/components/Logo';
 
 export function Footer(): React.ReactElement {
-    const { globalState } = useGlobalState();
     const siteConfiguration = useSiteConfiguration();
-    const darkModeEnabled = globalState.theme === Theme.Dark;
 
     return (
-        <footer
-            className={classes.Footer}
-            style={{
-                background: darkModeEnabled ? 'var(--background-color)' : 'var(--primary-color)',
-                borderTop: darkModeEnabled ? '3px solid var(--box-shadow-hover-color)' : undefined,
-            }}
-        >
+        <footer className={classes.Footer}>
             <div className={classes.ContentWrapper}>
-                <Link to="/" aria-label="home">
-                    <Logo
-                        fontSize="1.5rem"
-                        color={darkModeEnabled ? 'var(--primary-color)' : 'var(--background-color)'}
-                        theme={Theme.Dark}
-                    />
-                </Link>
+                <div>
+                    <Link to="/" aria-label="home">
+                        <Logo
+                            fontSize="1.35rem"
+                            color="rgba(255,255,255,0.9)"
+                            theme={Theme.Dark}
+                        />
+                    </Link>
+                    <p style={{
+                        fontFamily: 'var(--heading-font)',
+                        fontStyle: 'italic',
+                        fontSize: '1rem',
+                        color: 'rgba(255,255,255,0.45)',
+                        marginTop: '0.5rem',
+                        fontWeight: 400,
+                    }}>
+                        Sempre ao seu lado.
+                    </p>
+                </div>
                 <div className={classes.Links}>
-                    {siteConfiguration.navigation.footer.map((linkObject, key) => {
-                        return (
-                            <span
-                                key={key}
-                                aria-label={linkObject.label}
-                                style={{ color: darkModeEnabled ? 'var(--primary-color)' : 'var(--background-color)' }}
-                            >
-                                {linkObject.label}
-                            </span>
-                        );
-                    })}
+                    {siteConfiguration.navigation.footer.map((linkObject) => (
+                        <span key={linkObject.label} aria-label={linkObject.label}>
+                            {linkObject.label}
+                        </span>
+                    ))}
+                    <span style={{ color: 'rgba(255,255,255,0.2)', marginTop: '0.75rem' }}>
+                        © {new Date().getFullYear()} Emanuelle Fehr
+                    </span>
                 </div>
             </div>
         </footer>

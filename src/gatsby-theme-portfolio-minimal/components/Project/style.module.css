@@ -22,7 +22,7 @@
     font-style: italic;
     color: var(--primary-color);
     opacity: 0.12;
-    line-height: 1;
+    line-height: 1.8;
     margin-bottom: -1rem;
     letter-spacing: -0.04em;
     transition: opacity 0.3s ease;

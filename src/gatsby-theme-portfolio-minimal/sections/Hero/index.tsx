@@ -4,7 +4,7 @@ import { Section } from "gatsby-theme-portfolio-minimal/src/components/Section";
 import { Animation } from "gatsby-theme-portfolio-minimal";
 import { PageSection } from "gatsby-theme-portfolio-minimal/src/types";
 import { useLocalDataSource } from "gatsby-theme-portfolio-minimal/src/sections/Hero/data";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { FloatingElement } from "../../components/AnimatedComponents";
 // @ts-ignore
 import * as classes from "./style.module.css";
@@ -12,11 +12,24 @@ import * as classes from "./style.module.css";
 export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
   const response = useLocalDataSource();
   const data = response.allHeroJson.sections[0];
+  const shouldReduceMotion = useReducedMotion();
   const { scrollY } = useScroll();
-  const imgScale = useTransform(scrollY, [0, 600], [1, 1.08]);
-  const textY = useTransform(scrollY, [0, 900], [0, 72]);
-  const textOpacity = useTransform(scrollY, [0, 1100], [1, 0.35]);
-  const scrollHintOpacity = useTransform(scrollY, [0, 850], [1, 0.2]);
+  const imgScale = useTransform(
+    scrollY,
+    [0, 500],
+    shouldReduceMotion ? [1, 1] : [1, 1.03]
+  );
+  const textY = useTransform(scrollY, [0, 900], [0, shouldReduceMotion ? 0 : 56]);
+  const textOpacity = useTransform(
+    scrollY,
+    [0, 1100],
+    [1, shouldReduceMotion ? 1 : 0.45]
+  );
+  const scrollHintOpacity = useTransform(
+    scrollY,
+    [0, 850],
+    [1, shouldReduceMotion ? 1 : 0.2]
+  );
 
   return (
     <Section
@@ -123,11 +136,11 @@ export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
       {data.heroPhoto?.src && (
         <motion.div
           className={classes.heroImageCont}
-          initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
-          animate={{ opacity: 1, clipPath: "inset(0 0% 0 0)" }}
+          initial={shouldReduceMotion ? false : { opacity: 0, x: 20 }}
+          animate={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
           transition={{ duration: 1.1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
-          <motion.div style={{ scale: imgScale, height: "100%" }}>
+          <motion.div className={classes.heroImageMotionWrapper} style={{ scale: imgScale }}>
             <GatsbyImage
               className={classes.heroImage}
               image={data.heroPhoto.src.childImageSharp.gatsbyImageData}

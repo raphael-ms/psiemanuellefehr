@@ -119,17 +119,6 @@ export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
             </a>
           </motion.button>
         </motion.div>
-
-        {/* Scroll hint */}
-        <motion.div
-          className={classes.scrollHint}
-          style={{ opacity: scrollHintOpacity }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.8 }}
-        >
-          Scroll
-        </motion.div>
       </motion.div>
 
       {/* ── Right: photo column ───────────────────── */}

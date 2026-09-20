@@ -8,7 +8,7 @@ import {
 import { ContactSection } from "../gatsby-theme-portfolio-minimal/sections/Contact";
 import { ProjectsSection } from "../gatsby-theme-portfolio-minimal/sections/Projects";
 import { TestimonialSection } from "../gatsby-theme-portfolio-minimal/sections/Testimonials";
-import { LocalBusinessSchema, PersonSchema } from "../gatsby-theme-portfolio-minimal/components/Schema";
+import { LocalBusinessSchema, PersonSchema, WebSiteSchema } from "../gatsby-theme-portfolio-minimal/components/Schema";
 import { FloatingWhatsAppButton } from "../gatsby-theme-portfolio-minimal/components/FloatingWhatsAppButton";
 
 export default function IndexPage() {
@@ -19,17 +19,17 @@ export default function IndexPage() {
         description="Psicóloga clínica com atendimento online em português. Terapia Cognitivo-Comportamental para ansiedade, depressão, autoestima e relacionamentos."
         noIndex={false}
       />
-      <LocalBusinessSchema 
+      <WebSiteSchema />
+      <LocalBusinessSchema
         name="Emanuelle Fehr - Psicóloga"
-        description="Serviços de psicoterapia online com especialização em Terapia Cognitivo-Comportamental para ansiedade, depressão, TDAH e autoestima"
+        description="Serviços de psicoterapia online com especialização em Terapia Cognitivo-Comportamental para ansiedade, depressão, PHDA e autoestima."
         url="https://www.psimanufehr.com"
         telephone="+351910809408"
-        email="emanuelle.fehr@gmail.com"
+        email="emanuelle.fehr@mail.com"
       />
-      <PersonSchema 
+      <PersonSchema
         name="Emanuelle Fehr"
-        url="https://www.psimanufehr.com"
-        description="Psicóloga especialista em Terapia Cognitivo-Comportamental"
+        description="Psicóloga clínica especialista em Terapia Cognitivo-Comportamental, ACT e Terapia de Esquemas. Atendimento online em português."
       />
       <Page>
         <HeroSection sectionId="hero" />

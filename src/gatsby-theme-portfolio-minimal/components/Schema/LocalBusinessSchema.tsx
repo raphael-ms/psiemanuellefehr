@@ -9,19 +9,50 @@ interface LocalBusinessSchemaProps {
 }
 
 export function LocalBusinessSchema(props: Readonly<LocalBusinessSchemaProps>): React.ReactElement {
+  const siteUrl = "https://www.psimanufehr.com";
   const schema = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": props.url,
+    "@type": "MedicalBusiness",
+    "@id": `${siteUrl}/#organization`,
     name: props.name || "Emanuelle Fehr - Psicóloga",
-    description: props.description || "Serviços de psicoterapia online com especialização em Terapia Cognitivo-Comportamental",
-    url: props.url || "https://www.psimanufehr.com",
-    ...(props.telephone && { telephone: props.telephone }),
-    ...(props.email && { email: props.email }),
-    priceRange: "$",
-    areaServed: "PT",
-    serviceType: ["Psicoterapia", "Terapia Cognitivo-Comportamental", "Aconselhamento Psicológico"],
-    knowsAbout: ["Ansiedade", "Depressão", "TDAH", "Autoestima", "Relacionamentos", "Stress"],
+    description: props.description || "Serviços de psicoterapia online com especialização em Terapia Cognitivo-Comportamental para ansiedade, depressão, PHDA e autoestima.",
+    url: siteUrl,
+    telephone: props.telephone || "+351910809408",
+    email: props.email || "emanuelle.fehr@mail.com",
+    priceRange: "€€",
+    medicalSpecialty: "Psicologia Clínica",
+    image: `${siteUrl}/static/fdb7067cc61cb75afa15c2736f638818/67c6e/emanuelle-about.avif`,
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "PT",
+    },
+    areaServed: [
+      { "@type": "Country", "name": "Portugal" },
+      { "@type": "Country", "name": "Netherlands" },
+      { "@type": "Country", "name": "Denmark" },
+      { "@type": "Country", "name": "Switzerland" },
+    ],
+    availableService: [
+      { "@type": "MedicalTherapy", "name": "Terapia Cognitivo-Comportamental (TCC)" },
+      { "@type": "MedicalTherapy", "name": "ACT – Terapia de Aceitação e Compromisso" },
+      { "@type": "MedicalTherapy", "name": "Terapia do Esquema" },
+      { "@type": "MedicalTherapy", "name": "Psicologia Intercultural" },
+    ],
+    sameAs: [
+      "https://www.instagram.com/manufehr/",
+    ],
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "license",
+      name: "Entidade Reguladora da Saúde",
+      identifier: "E173632",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "Entidade Reguladora da Saúde (ERS)",
+        url: "https://www.ers.pt",
+      },
+    },
+    founder: { "@id": `${siteUrl}/#person` },
   };
 
   return (

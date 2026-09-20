@@ -53,6 +53,12 @@ module.exports = {
         host: "https://www.psimanufehr.com",
         sitemap: "https://www.psimanufehr.com/sitemap-index.xml",
         policy: [
+          { userAgent: "GPTBot", allow: "/" },
+          { userAgent: "OAI-SearchBot", allow: "/" },
+          { userAgent: "ChatGPT-User", allow: "/" },
+          { userAgent: "ClaudeBot", allow: "/" },
+          { userAgent: "PerplexityBot", allow: "/" },
+          { userAgent: "Google-Extended", allow: "/" },
           {
             userAgent: "*",
             allow: "/",

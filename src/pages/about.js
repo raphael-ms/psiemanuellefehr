@@ -7,7 +7,7 @@ import { AboutSection } from "../gatsby-theme-portfolio-minimal/components/About
 import { PersonSchema } from "../gatsby-theme-portfolio-minimal/components/Schema";
 import { FloatingWhatsAppButton } from "../gatsby-theme-portfolio-minimal/components/FloatingWhatsAppButton";
 
-export default function IndexPage() {
+export default function AboutPage() {
   return (
     <>
       <Seo
@@ -15,10 +15,9 @@ export default function IndexPage() {
         description="Conheça a formação e experiência clínica da psicóloga Emanuelle Fehr em Terapia Cognitivo-Comportamental e acompanhamento psicológico online."
         noIndex={false}
       />
-      <PersonSchema 
+      <PersonSchema
         name="Emanuelle Fehr"
-        url="https://www.psimanufehr.com/about"
-        description="Psicóloga com formação em Terapia Cognitivo-Comportamental. Especialista em ansiedade, depressão, TDAH e desenvolvimento pessoal."
+        description="Psicóloga clínica com Mestrado pela Universidade de Coimbra, especialista em TCC, ACT e Terapia de Esquemas. Atendimento online em português."
       />
       <Page>
         <AboutSection sectionId="hero" />

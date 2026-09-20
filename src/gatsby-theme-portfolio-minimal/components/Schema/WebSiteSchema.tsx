@@ -11,6 +11,14 @@ export function WebSiteSchema(): React.ReactElement {
     description: "Psicoterapia online com Terapia Cognitivo-Comportamental em Portugal e para a diáspora lusófona.",
     inLanguage: "pt-PT",
     publisher: { "@id": `${siteUrl}/#person` },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteUrl}/?s={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
   };
 
   return (

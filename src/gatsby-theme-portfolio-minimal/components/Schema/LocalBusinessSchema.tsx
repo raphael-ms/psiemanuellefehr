@@ -20,12 +20,14 @@ export function LocalBusinessSchema(props: Readonly<LocalBusinessSchemaProps>): 
     telephone: props.telephone || "+351910809408",
     email: props.email || "emanuelle.fehr@mail.com",
     priceRange: "€€",
-    medicalSpecialty: "Psicologia Clínica",
-    image: `${siteUrl}/static/fdb7067cc61cb75afa15c2736f638818/67c6e/emanuelle-about.avif`,
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "PT",
+    medicalSpecialty: "https://schema.org/Psychiatric",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteUrl}/emanuelle-fehr-profile.avif`,
+      width: 400,
+      height: 400,
     },
+    image: `${siteUrl}/emanuelle-fehr-profile.avif`,
     areaServed: [
       { "@type": "Country", "name": "Portugal" },
       { "@type": "Country", "name": "Netherlands" },
@@ -38,6 +40,27 @@ export function LocalBusinessSchema(props: Readonly<LocalBusinessSchemaProps>): 
       { "@type": "MedicalTherapy", "name": "Terapia do Esquema" },
       { "@type": "MedicalTherapy", "name": "Psicologia Intercultural" },
     ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      reviewCount: "4",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "20:00",
+      },
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      availableLanguage: "Portuguese",
+      url: "https://api.whatsapp.com/message/X7NOGR2DKCOYP1",
+    },
     sameAs: [
       "https://www.instagram.com/manufehr/",
     ],

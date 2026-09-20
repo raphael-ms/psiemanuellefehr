@@ -8,7 +8,7 @@ import {
 import { ContactSection } from "../gatsby-theme-portfolio-minimal/sections/Contact";
 import { ProjectsSection } from "../gatsby-theme-portfolio-minimal/sections/Projects";
 import { TestimonialSection } from "../gatsby-theme-portfolio-minimal/sections/Testimonials";
-import { LocalBusinessSchema, PersonSchema, WebSiteSchema } from "../gatsby-theme-portfolio-minimal/components/Schema";
+import { LocalBusinessSchema, PersonSchema, WebSiteSchema, FAQPageSchema } from "../gatsby-theme-portfolio-minimal/components/Schema";
 import { FloatingWhatsAppButton } from "../gatsby-theme-portfolio-minimal/components/FloatingWhatsAppButton";
 
 const trustBarStyle = {
@@ -68,13 +68,14 @@ export default function IndexPage() {
         name="Emanuelle Fehr"
         description="Psicóloga clínica especialista em Terapia Cognitivo-Comportamental, ACT e Terapia de Esquemas. Atendimento online em português."
       />
+      <FAQPageSchema />
       <Page>
         <HeroSection sectionId="hero" />
 
         {/* Trust bar — credentials at a glance */}
         <div style={trustBarStyle} aria-label="Credenciais profissionais">
-          <span style={trustItemStyle}>✓ OPP Nº 27145</span>
-          <span style={trustItemStyle}>✓ ERS E173632</span>
+          <a href="https://www.ordemdospsicologos.pt/pt/publico/verificar-cedula" target="_blank" rel="noopener noreferrer" style={{...trustItemStyle, textDecoration: "none"}}>✓ OPP Nº 27145</a>
+          <a href="https://www.ers.pt" target="_blank" rel="noopener noreferrer" style={{...trustItemStyle, textDecoration: "none"}}>✓ ERS E173632</a>
           <span style={trustItemStyle}>✓ Universidade de Coimbra</span>
           <span style={trustItemStyle}>✓ Sessão introdutória gratuita</span>
           <span style={trustItemStyle}>✓ Confidencialidade garantida</span>

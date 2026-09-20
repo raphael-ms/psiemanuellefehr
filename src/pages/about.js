@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <>
       <Seo
-        title="Psicóloga Online | Terapia Cognitivo-Comportamental | Emanuelle Fehr | Sobre Mim"
+        title="Sobre Mim | Emanuelle Fehr - Psicóloga Online"
         description="Conheça a formação e experiência clínica da psicóloga Emanuelle Fehr em Terapia Cognitivo-Comportamental e acompanhamento psicológico online."
         noIndex={false}
       />

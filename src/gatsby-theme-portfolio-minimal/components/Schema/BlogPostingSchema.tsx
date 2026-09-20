@@ -22,6 +22,7 @@ export function BlogPostingSchema(props: Readonly<BlogPostingSchemaProps>): Reac
     dateModified: props.dateModified || props.datePublished,
     author: {
       "@type": "Person",
+      "@id": "https://www.psimanufehr.com/#person",
       name: props.author || "Emanuelle Fehr",
     },
     url: props.url,

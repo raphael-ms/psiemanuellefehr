@@ -4,7 +4,7 @@ description: "Como explorar a própria relação e compreender o que realmente e
 date: "2025-05-28"
 slug: "/blog/conexao-emocional"
 author: "Emanuelle Fehr"
-canonicalUrl: "https://psimanufehr.com/blog/conexao-emocional"
+canonicalUrl: "https://www.psimanufehr.com/blog/conexao-emocional"
 banner:
   src: "../../images/cuidado.avif"
   alt: "Humano recebendo cuidado"

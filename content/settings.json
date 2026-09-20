@@ -9,7 +9,7 @@
     "bio": "Sou psicóloga clínica, especializada em oferecer apoio emocional e em criar espaços seguros, acolhedores e confidenciais, onde cada pessoa possa se expressar com liberdade.",
     "author": "Emanuelle Fehr",
     "social": {
-      "mail": "mailto:emanuelle.fehr@gmail.com"
+      "mail": "mailto:emanuelle.fehr@mail.com"
 
     }
   },
@@ -34,7 +34,7 @@
     "featureToggles": {
       "useDarkModeAsDefault": false,
       "useDarkModeBasedOnUsersPreference": false,
-      "useCookieBar": false
+      "useCookieBar": true
     }
   }
 }

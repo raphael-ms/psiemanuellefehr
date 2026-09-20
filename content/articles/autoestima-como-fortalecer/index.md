@@ -4,7 +4,7 @@ description: "A autoestima é a base da nossa saúde emocional. Ela influencia n
 date: "2025-11-30"
 slug: "/blog/autoestima-como-fortalecer"
 author: "Emanuelle Fehr"
-canonicalUrl: "https://psimanufehr.com/blog/autoestima-como-fortalecer"
+canonicalUrl: "https://www.psimanufehr.com/blog/autoestima-como-fortalecer"
 banner:
   src: "../../images/autoestima.avif"
   alt: "Mulher alegre"

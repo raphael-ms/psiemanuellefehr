@@ -2,7 +2,7 @@
   "intro": "Olá, Seja Bem Vindo (a)",
   "heroPhoto": {
     "src": "../../images/heroimage.avif",
-    "alt": "My Photo"
+    "alt": "Emanuelle Fehr, Psicóloga Clínica Online"
   },
   "image": {
     "src": "../../images/waving-hand.png",
@@ -17,6 +17,6 @@
   "description": " A terapia é um espaço seguro e confidencial, pensado para promover autoconhecimento, acolhimento e desenvolvimento pessoal, com base em práticas fundamentadas cientificamente. Conheça um pouco mais sobre mim, minha formação e como posso te ajudar.",
   "socialProfiles": {
     "from": ["LinkedIn", "Medium", "Github", "Mail"],
-    "showIcons": false
+    "showIcons": true
   }
 }

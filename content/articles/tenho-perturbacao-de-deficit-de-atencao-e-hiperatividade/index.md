@@ -4,7 +4,7 @@ description: "No mundo atual, com excesso de informações, múltiplas tarefas e
 date: "2025-10-08"
 slug: "/blog/tenho-perturbacao-de-deficit-de-atencao-e-hiperatividade"
 author: "Emanuelle Fehr"
-canonicalUrl: "https://psimanufehr.com/blog/tenho-perturbacao-de-deficit-de-atencao-e-hiperatividade"
+canonicalUrl: "https://www.psimanufehr.com/blog/tenho-perturbacao-de-deficit-de-atencao-e-hiperatividade"
 banner:
   src: "../../images/tdah.avif"
   alt: "Humano refletindo"

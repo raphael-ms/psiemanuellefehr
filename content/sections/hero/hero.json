@@ -1,5 +1,5 @@
 {
-  "intro": "Olá, Seja Bem Vindo (a)",
+  "intro": "Psicóloga Online · OPP 27145 · ERS E173632",
   "heroPhoto": {
     "src": "../../images/heroimage.avif",
     "alt": "Emanuelle Fehr, Psicóloga Clínica Online"
@@ -8,13 +8,13 @@
     "src": "../../images/waving-hand.png",
     "alt": "Waving Hand Emoji"
   },
-  "title": " Emanuelle Fehr.",
+  "title": "Psicoterapia online em português — onde estiver.",
   "subtitle": {
-    "prefix": "Se você chegou até aqui, seja em busca de apoio para si ou para alguém próximo, já deu um passo significativo em direção ao cuidado.",
+    "prefix": "Sou a Emanuelle Fehr, psicóloga clínica especializada em TCC, ACT e Terapia de Esquemas. Se chegaste até aqui, já deste um passo significativo em direção ao cuidado.",
     "highlight": "cuidado",
     "suffix": "."
   },
-  "description": " A terapia é um espaço seguro e confidencial, pensado para promover autoconhecimento, acolhimento e desenvolvimento pessoal, com base em práticas fundamentadas cientificamente. Conheça um pouco mais sobre mim, minha formação e como posso te ajudar.",
+  "description": "A terapia é um espaço seguro e confidencial para promover autoconhecimento, acolhimento e desenvolvimento pessoal, com base em práticas fundamentadas cientificamente. Sessões online por videochamada, em português, para Portugal e para a diáspora lusófona.",
   "socialProfiles": {
     "from": ["LinkedIn", "Medium", "Github", "Mail"],
     "showIcons": true

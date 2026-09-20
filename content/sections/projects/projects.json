@@ -30,29 +30,6 @@
       }
     }
   ],
-  "testimonials": [
-    {
-      "visible": true,
-      "name": "C. M.",
-      "gender": "♀",
-      "countryEmoji": "🇩🇰",
-      "text": "No meu processo terapêutico, o que mais me ajudou foi a forma como fui orientada a descomplicar situações e a utilizar ferramentas para controlar melhor a minha ansiedade. A comunicação clara e acolhedora fez com que me sentisse confortável para partilhar tudo, sem medo de julgamento. Além disso, os exercícios propostos entre sessões têm sido muito úteis no meu dia a dia, ajudando-me a aplicar o que aprendi na vida cotidiana..."
-    },
-    {
-      "visible": true,
-      "name": "C. M.",
-      "gender": "♀",
-      "countryEmoji": "🇩🇰",
-      "text": "No meu processo terapêutico, o que mais me ajudou foi a forma como fui orientada a descomplicar situações e a utilizar ferramentas para controlar melhor a minha ansiedade. A comunicação clara e acolhedora fez com que me sentisse confortável para partilhar tudo, sem medo de julgamento. Além disso, os exercícios propostos entre sessões têm sido muito úteis no meu dia a dia, ajudando-me a aplicar o que aprendi na vida cotidiana..."
-    },
-    {
-      "visible": true,
-      "name": "C. M.",
-      "gender": "♀",
-      "countryEmoji": "🇩🇰",
-      "text": "No meu processo terapêutico, o que mais me ajudou foi a forma como fui orientada a descomplicar situações e a utilizar ferramentas para controlar melhor a minha ansiedade. A comunicação clara e acolhedora fez com que me sentisse confortável para partilhar tudo, sem medo de julgamento. Além disso, os exercícios propostos entre sessões têm sido muito úteis no meu dia a dia, ajudando-me a aplicar o que aprendi na vida cotidiana..."
-    }
-  ],
   "button": {
     "visible": false,
     "label": "Visit on Github",

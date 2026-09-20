@@ -24,29 +24,30 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-google-gtag",
+      // Consent-gated Google Analytics. The theme's CookieBar calls
+      // initializeAndTrack() on "Accept", which relies on this plugin registering
+      // window.gatsbyPluginGDPRCookiesOptions on client entry.
+      resolve: "gatsby-plugin-gdpr-cookies",
       options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          "G-0Z5YJD8CL6", // Replace with your Google Analytics 4 Measurement ID
-        ],
-        // This object gets passed directly to the gtag config command
-        gtagConfig: {
-          anonymize_ip: true,
-          cookie_expires: 0,
+        googleAnalytics: {
+          trackingId: "G-0Z5YJD8CL6", // Google Analytics 4 Measurement ID
+          cookieName: "gatsby-gdpr-google-analytics", // must match CookieBar cookieName
+          anonymize: true,
+          allowAdFeatures: false,
         },
-        // This object is used for configuration specific to this plugin
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: true,
-          // Setting this parameter is also optional
-          respectDNT: true,
-          // Avoids sending pageview hits from custom paths
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
-        },
+        // Only load tracking in production
+        environments: ["production"],
       },
     },
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        serialize: ({ path, modifiedGmt }) => ({
+          url: path,
+          lastmod: modifiedGmt,
+        }),
+      },
+    },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {

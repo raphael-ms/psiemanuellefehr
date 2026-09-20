@@ -69,14 +69,14 @@ export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
           )}
         </motion.div>
 
-        {/* Heading */}
+        {/* Heading — service-first value proposition */}
         <motion.h1
           className={classes.Title}
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
-          Sou a<u>{data.title}</u>
+          {data.title}
         </motion.h1>
 
         {/* Subtitle */}
@@ -135,6 +135,7 @@ export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
               image={data.heroPhoto.src.childImageSharp.gatsbyImageData}
               alt={data.heroPhoto.alt || `Profile Image`}
               loading="eager"
+              fetchPriority="high"
             />
           </motion.div>
         </motion.div>

@@ -103,6 +103,50 @@
   color: var(--subtext-color);
 }
 
+.FaqList {
+  width: 100%;
+}
+
+.FaqItem {
+  border-bottom: 1px solid var(--secondary-color);
+  padding: 1.2rem 0;
+  cursor: pointer;
+}
+
+.FaqSummary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-color);
+}
+
+.FaqSummary::-webkit-details-marker {
+  display: none;
+}
+
+.FaqIcon {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.FaqItem[open] .FaqIcon {
+  transform: rotate(45deg);
+}
+
+.FaqAnswer {
+  margin-top: 0.75rem;
+  line-height: 1.75;
+  color: var(--subtext-color);
+  font-size: 1rem;
+}
+
 @media (max-width: 900px) {
   .AboutGrid {
     grid-template-columns: 1fr;

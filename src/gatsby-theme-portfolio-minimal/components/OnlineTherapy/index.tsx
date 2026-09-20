@@ -364,6 +364,46 @@ export function OnlineTherapy(): React.ReactElement {
         </div>
         </AnimatedSection>
       </Section>
+
+      {/* FAQ — visible content for AI citability and user trust */}
+      <Section anchor="faq" heading="Perguntas Frequentes">
+        <AnimatedSection direction="up" delay={0.1}>
+          <div className={classes.FaqList}>
+            {[
+              {
+                q: "A psicoterapia online é tão eficaz quanto a presencial?",
+                a: "Sim. Diversos estudos científicos, incluindo meta-análises publicadas em revistas internacionais, demonstram que a psicoterapia online apresenta eficácia equivalente à presencial para ansiedade, depressão e perturbações de humor. A modalidade é reconhecida pela Ordem dos Psicólogos Portugueses (OPP) e pela American Psychological Association (APA) como uma forma válida e segura de acompanhamento psicológico.",
+              },
+              {
+                q: "O que é a Terapia Cognitivo-Comportamental (TCC)?",
+                a: "A TCC é uma abordagem psicológica baseada em evidências científicas, desenvolvida por Aaron T. Beck nos anos 1960. Trabalha a relação entre pensamentos, emoções e comportamentos — ajudando a identificar padrões disfuncionais e a desenvolver estratégias mais adaptativas. É reconhecida como tratamento de primeira linha para ansiedade, depressão, PHDA e fobias.",
+              },
+              {
+                q: "Quanto tempo dura uma sessão de psicoterapia online?",
+                a: "As sessões têm duração padrão de 50 minutos, realizadas por videochamada. Existe também uma sessão introdutória gratuita de 15 minutos — sem compromisso — para conhecer a abordagem terapêutica e esclarecer dúvidas antes de iniciar o processo.",
+              },
+              {
+                q: "As sessões são confidenciais?",
+                a: "Sim. Toda a informação partilhada em contexto terapêutico é protegida pelo sigilo profissional, nos termos do Código Deontológico da Ordem dos Psicólogos Portugueses. O sigilo só pode ser quebrado nos casos expressamente previstos na lei.",
+              },
+              {
+                q: "Como funciona a primeira consulta?",
+                a: "O processo começa com uma videochamada introdutória gratuita de 15 minutos para se familiarizar com a psicóloga e o formato do atendimento. As sessões de psicoterapia têm 50 minutos e são construídas de forma colaborativa, com avaliação inicial das necessidades e objetivos de cada pessoa, respeitando sempre o ritmo individual.",
+              },
+            ].map(({ q, a }, i) => (
+              <AnimatedSection key={i} direction="up" delay={0.1 + i * 0.08}>
+                <details className={classes.FaqItem}>
+                  <summary className={classes.FaqSummary}>
+                    {q}
+                    <span className={classes.FaqIcon}>+</span>
+                  </summary>
+                  <p className={classes.FaqAnswer}>{a}</p>
+                </details>
+              </AnimatedSection>
+            ))}
+          </div>
+        </AnimatedSection>
+      </Section>
     </>
   );
 }

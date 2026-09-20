@@ -20,6 +20,7 @@ const trustBarStyle = {
   borderTop: "1px solid var(--secondary-color)",
   borderBottom: "1px solid var(--secondary-color)",
   backgroundColor: "var(--tertiary-color)",
+  margin: "5rem 0",
 };
 
 const trustItemStyle = {
@@ -35,8 +36,7 @@ const trustItemStyle = {
 
 const expatCalloutStyle = {
   textAlign: "center",
-  padding: "0.5rem 2rem 0",
-  marginBottom: "-0.5rem",
+  margin: "3rem 0",
 };
 
 const expatHeadingStyle = {
@@ -78,13 +78,14 @@ export default function IndexPage() {
           <span style={trustItemStyle}>✓ Universidade de Coimbra</span>
           <span style={trustItemStyle}>✓ Sessão introdutória gratuita</span>
           <span style={trustItemStyle}>✓ Confidencialidade garantida</span>
+          <span style={trustItemStyle}>✓ Aderente ao cheque psicológo</span>
         </div>
 
         <AboutSection sectionId="sobre" heading="Formação Profissional" />
 
         {/* Expat callout — surfaces international differentiator */}
         <div style={expatCalloutStyle}>
-          <p style={expatHeadingStyle}>🌍 Para portugueses no estrangeiro — Dinamarca · Países Baixos · Suíça · e mais</p>
+          <p style={expatHeadingStyle}>🌍 Para portugueses e brasileiros pelo mundo</p>
         </div>
 
         <TestimonialSection sectionId="depoimentos" heading="Depoimentos" />

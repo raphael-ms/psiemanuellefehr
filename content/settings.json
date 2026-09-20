@@ -1,12 +1,12 @@
 {
   "siteMetadata": {
-    "language": "pt",
+    "language": "pt-PT",
     "siteUrl": "https://www.psimanufehr.com/",
     "title": "Psicóloga Online | Terapia Cognitivo-Comportamental | Emanuelle Fehr",
-    "titleTemplate": "Psicóloga Online | Terapia Cognitivo-Comportamental | Emanuelle Fehr - %s",
-    "description": "Este é o website da psicologa Emanuelle Fehr, seja bem-vindo. Terapia online, em português ou inglês. Terapia de casal, Counseling, Psicoterapia Breve e Urgências, Ansiedade, Imigrantes, Atendimento Online. Psicóloga clínica especializada em Terapia Cognitivo-Comportamental. Atendimento online para ansiedade, depressão, autoestima e relacionamentos. ",
+    "titleTemplate": "Emanuelle Fehr · Psicóloga Online - %s",
+    "description": "Psicóloga clínica com atendimento online em português. Especializada em TCC, ACT e Terapia do Esquema para ansiedade, depressão, autoestima e neurodiversidade. Registada OPP Nº 27145 e ERS E173632.",
     "avatar": "../content/images/profile.png",
-    "bio": "Sou psicóloga clínica, especializada em oferecer apoio emocional e em criar espaços seguros, acolhedores e confidenciais, onde cada pessoa possa se expressar com liberdade.",
+    "bio": "Psicóloga Clínica (OPP Nº 27145), Mestre pela Universidade de Coimbra, especializada em TCC, ACT e Terapia do Esquema. Atendimento online em português para Portugal e diáspora.",
     "author": "Emanuelle Fehr",
     "social": {
       "mail": "mailto:emanuelle.fehr@mail.com"

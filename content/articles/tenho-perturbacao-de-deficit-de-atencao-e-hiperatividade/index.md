@@ -39,7 +39,7 @@ Seus principais sinais envolvem **desatenção persistente**, **impulsividade**�
 
 Mesmo que você não tenha PHDA, adotar práticas para reduzir estímulos e melhorar o foco pode trazer benefícios imediatos:
 
-1.  **Pausas conscientes** �� Faça intervalos curtos durante o trabalho para alongar, respirar ou caminhar, estratégias essas que realmente permitam se desconectar e relaxar e não se distrair com mais informação.
+1.  **Pausas conscientes** — Faça intervalos curtos durante o trabalho para alongar, respirar ou caminhar, estratégias essas que realmente permitam se desconectar e relaxar e não se distrair com mais informação.
     
 2.  **Respiração profunda ou meditação** – Técnicas simples de respiração ajudam a acalmar a mente e aumentar a clareza mental.
     

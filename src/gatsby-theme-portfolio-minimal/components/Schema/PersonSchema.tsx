@@ -16,7 +16,7 @@ export function PersonSchema(props: Readonly<PersonSchemaProps>): React.ReactEle
     "@id": `${siteUrl}/#person`,
     name: props.name || "Emanuelle Fehr",
     url: siteUrl,
-    image: props.image || `${siteUrl}/static/fdb7067cc61cb75afa15c2736f638818/67c6e/emanuelle-about.avif`,
+    image: props.image || `${siteUrl}/emanuelle-fehr-profile.avif`,
     description: props.description || "Psicóloga clínica especialista em Terapia Cognitivo-Comportamental, ACT e Terapia de Esquemas. Atendimento online em português.",
     jobTitle: "Psicóloga Clínica",
     knowsAbout: [
@@ -66,8 +66,12 @@ export function PersonSchema(props: Readonly<PersonSchemaProps>): React.ReactEle
         name: "CRIAP – Centro de Referência e Investigação em Psicologia",
       },
     ],
+    knowsLanguage: [
+      { "@type": "Language", name: "Portuguese", alternateName: "pt" },
+    ],
     sameAs: props.sameAs || [
       "https://www.instagram.com/manufehr/",
+      "https://www.ordemdospsicologos.pt/pt/publico/verificar-cedula",
     ],
     worksFor: { "@id": `${siteUrl}/#organization` },
   };

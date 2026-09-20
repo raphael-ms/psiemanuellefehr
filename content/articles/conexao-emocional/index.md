@@ -22,11 +22,11 @@ keywords:
 
 Como explorar a própria relação e compreender o que realmente está acontecendo
 
-###
+### Intimidade sexual versus conexão emocional: qual é a diferença?
 
 Você já se perguntou se a diminuição da vida sexual no seu relacionamento é apenas uma fase ou um sinal de algo mais profundo? Muitas vezes, a ausência de intimidade física desperta dúvidas: será que é apenas falta de desejo, rotina, ou estamos a perder a conexão emocional?Entender essa diferença é fundamental para cuidar do vínculo e evitar que pequenos distanciamentos se tornem barreiras difíceis de ultrapassar.
 
-###
+### O que distingue a falta de intimidade da perda de conexão?
 
 A sexualidade é uma parte importante de muitos relacionamentos, mas não é o único indicador de proximidade.
 
@@ -60,6 +60,6 @@ Explorar a própria relação significa olhar para estes sinais sem julgamentos.
 
 5. **Considerar apoio profissional** -- Terapia individual ou de casal pode facilitar a comunicação e oferecer estratégias para recuperar a intimidade emocional e física.
 
-###
+### O que fazer quando o diálogo está difícil?
 
 A falta de relação sexual não é, por si só, sinal de que o amor acabou. Muitas vezes, é um convite para olhar mais fundo, identificar necessidades não expressas e fortalecer a conexão emocional. Se sente que o diálogo está difícil ou que as mudanças na relação estão a gerar sofrimento, aqui no meu consultório eu ofereço esse trabalho e você pode entrar em contacto comigo, esse pode ser um passo importante para reconstruir a proximidade e o prazer de estar junto.

@@ -18,7 +18,7 @@ export function LocalBusinessSchema(props: Readonly<LocalBusinessSchemaProps>): 
     description: props.description || "Serviços de psicoterapia online com especialização em Terapia Cognitivo-Comportamental para ansiedade, depressão, PHDA e autoestima.",
     url: siteUrl,
     telephone: props.telephone || "+351910809408",
-    email: props.email || "emanuelle.fehr@mail.com",
+    email: props.email || "emanuelle.fehr@gmail.com",
     priceRange: "€€",
     medicalSpecialty: "https://schema.org/Psychiatric",
     logo: {

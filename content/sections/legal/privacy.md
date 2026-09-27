@@ -6,7 +6,7 @@ sectionId: privacy
 
 **Responsável pelo tratamento de dados:** Emanuelle Fehr  
 **Website:** https://www.psimanufehr.com/  
-**E-mail de contacto:** emanuelle.fehr@mail.com  
+**E-mail de contacto:** emanuelle.fehr@gmail.com  
 **Data de vigência:** 20 de setembro de 2026
 
 ---
@@ -80,7 +80,7 @@ Nos termos dos artigos 15.º a 22.º do RGPD, tem o direito de:
 - **Oposição** — opor-se ao tratamento baseado em interesse legítimo;
 - **Retirada do consentimento** — revogar o consentimento a qualquer momento, sem afetar a licitude do tratamento anterior.
 
-Para exercer qualquer destes direitos, contacte-me por e-mail: **emanuelle.fehr@mail.com**. Responderei no prazo máximo de **30 dias**.
+Para exercer qualquer destes direitos, contacte-me por e-mail: **emanuelle.fehr@gmail.com**. Responderei no prazo máximo de **30 dias**.
 
 ---
 
@@ -107,4 +107,4 @@ Esta política pode ser atualizada periodicamente. A data de vigência indica a 
 
 ---
 
-*Para qualquer questão sobre esta Política de Privacidade, contacte: **emanuelle.fehr@mail.com***
+*Para qualquer questão sobre esta Política de Privacidade, contacte: **emanuelle.fehr@gmail.com***

@@ -64,7 +64,7 @@ export default function IndexPage() {
         description="Serviços de psicoterapia online com especialização em Terapia Cognitivo-Comportamental para ansiedade, depressão, PHDA e autoestima."
         url="https://www.psimanufehr.com"
         telephone="+351910809408"
-        email="emanuelle.fehr@mail.com"
+        email="emanuelle.fehr@gmail.com"
       />
       <PersonSchema
         name="Emanuelle Fehr"

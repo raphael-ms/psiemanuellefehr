@@ -10,7 +10,7 @@ sectionId: imprint
 Psicóloga Clínica  
 Portugal
 
-**E-mail:** emanuelle.fehr@mail.com  
+**E-mail:** emanuelle.fehr@gmail.com  
 **Telefone:** +351 910 809 408  
 **Website:** https://www.psimanufehr.com/
 

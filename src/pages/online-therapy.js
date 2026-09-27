@@ -20,7 +20,7 @@ export default function OnlineTherapyPage() {
         description="Serviços de psicoterapia online com Terapia Cognitivo-Comportamental para tratamento de ansiedade, depressão, PHDA e questões emocionais."
         url="https://www.psimanufehr.com/online-therapy"
         telephone="+351910809408"
-        email="emanuelle.fehr@mail.com"
+        email="emanuelle.fehr@gmail.com"
       />
       <PersonSchema
         name="Emanuelle Fehr"

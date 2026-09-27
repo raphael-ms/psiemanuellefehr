@@ -110,7 +110,7 @@ Create `/static/llms.txt` in the Gatsby project (Gatsby serves `/static/` as roo
 - Especialização: TCC (CRIAP, 2024), ACT, Terapia de Esquemas
 - Sessões: 50 minutos, online por videochamada; sessão introdutória gratuita de 15 minutos
 - Clientes: Portugal, Países Baixos, Dinamarca, Suíça
-- Contacto: emanuelle.fehr@mail.com | +351 910 809 408
+- Contacto: emanuelle.fehr@gmail.com | +351 910 809 408
 ```
 
 ---

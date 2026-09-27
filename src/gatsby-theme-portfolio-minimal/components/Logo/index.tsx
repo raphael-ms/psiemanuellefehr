@@ -38,13 +38,6 @@ export function Logo(props: Readonly<LogoProps>): React.ReactElement {
         >
           {ThemeSpecificLogo || logo.text}
         </div>
-        <div
-          className={classes.Logo}
-          aria-roledescription="slogan"
-          style={{ fontSize: "0.6rem", color }}
-        >
-          Psicóloga Especialista em Terapia Cognitivo Comportamental
-        </div>
       </div>
   );
 }

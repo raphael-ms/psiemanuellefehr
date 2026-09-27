@@ -15,7 +15,23 @@ export function Header(): React.ReactElement {
   const siteConfiguration = useSiteConfiguration() as SiteConfigWithSocial & any;
   const socialLinks = siteConfiguration.siteMetadata?.social || {};
   const [open, setOpen] = React.useState<boolean>(false);
+  const [scrolled, setScrolled] = React.useState<boolean>(false);
   const closeMenu = () => setOpen(false);
+
+  React.useEffect(() => {
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 24);
+        ticking = false;
+      });
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const cta = siteConfiguration.navigation.ctaButton;
 
@@ -26,11 +42,11 @@ export function Header(): React.ReactElement {
   ));
 
   return (
-    <header className={classes.Header}>
+    <header className={`${classes.Header} ${scrolled ? classes.Scrolled : ""}`}>
       <div className={classes.ContentWrapper}>
         <div style={{ flex: 1 }}>
           <Link to="/" aria-label="home" onClick={closeMenu}>
-            <Logo />
+            <Logo fontSize={scrolled ? "1.45rem" : "2rem"} />
           </Link>
         </div>
 

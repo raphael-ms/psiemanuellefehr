@@ -1,11 +1,9 @@
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Section } from "gatsby-theme-portfolio-minimal/src/components/Section";
-import { Animation } from "gatsby-theme-portfolio-minimal";
 import { PageSection } from "gatsby-theme-portfolio-minimal/src/types";
 import { useLocalDataSource } from "gatsby-theme-portfolio-minimal/src/sections/Hero/data";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { FloatingElement } from "../../components/AnimatedComponents";
 // @ts-ignore
 import * as classes from "./style.module.css";
 
@@ -42,32 +40,14 @@ export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
         style={{ y: textY, opacity: textOpacity }}
       >
         {/* Eyebrow */}
-        <motion.div
+        <motion.p
           className={classes.Intro}
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
         >
-          {data.intro && (
-            <span className={classes.ImagePrefix}>{data.intro}</span>
-          )}
-          {data.image?.src && (
-            <FloatingElement duration={3} yOffset={6}>
-              <Animation
-                className={classes.Image}
-                type="waving-hand"
-                duration={2500}
-                iterationCount={3}
-              >
-                <GatsbyImage
-                  image={data.image.src.childImageSharp.gatsbyImageData}
-                  alt={data.image.alt || `Intro Image`}
-                  loading="eager"
-                />
-              </Animation>
-            </FloatingElement>
-          )}
-        </motion.div>
+          {data.intro}
+        </motion.p>
 
         {/* Heading — service-first value proposition */}
         <motion.h1

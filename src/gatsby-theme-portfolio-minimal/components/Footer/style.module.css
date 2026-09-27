@@ -1,4 +1,4 @@
-/* ── Footer: editorial dark strip ──────────────────────────────────────── */
+/* ── Footer ─────────────────────────────────────────────────────────────── */
 .Footer {
     display: flex;
     flex-direction: row;
@@ -10,23 +10,6 @@
     padding: 3.5rem 0;
     position: relative;
     overflow: hidden;
-}
-
-/* Subtle decorative background text */
-.Footer::before {
-    content: 'EMANUELLE FEHR';
-    position: absolute;
-    bottom: -1.5rem;
-    right: -1rem;
-    font-family: var(--heading-font);
-    font-size: clamp(3rem, 8vw, 7rem);
-    font-weight: 900;
-    font-style: italic;
-    color: rgba(255,255,255,0.035);
-    pointer-events: none;
-    white-space: nowrap;
-    letter-spacing: -0.02em;
-    line-height: 1;
 }
 
 .ContentWrapper {

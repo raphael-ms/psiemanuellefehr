@@ -37,12 +37,12 @@
   border-radius: var(--border-radius);
   border: 0.125rem solid var(--primary-color);
   background: var(--background-color);
-  padding: 0.5rem 1.5rem;  
-  transition: 20ms ease-out;
+  padding: 0.75rem 1.6rem;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
   margin-top: 2rem;
   & a {
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
     color: var(--primary-color);
 
@@ -51,6 +51,8 @@
 
 .ScheduleButton:hover {
   background: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px var(--box-shadow-hover-color);
   & a {
     color: var(--background-color);
   }
@@ -72,7 +74,7 @@
 }
 
 .AboutText p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.75;
   color: var(--text-color);
   margin-bottom: 1.25rem;
@@ -80,7 +82,7 @@
 }
 
 .ExperienceText {
-  font-size: 0.9rem;
+  font-size: 1rem;
   display: flex;
   flex-direction: row-reverse;
   gap: 3rem;

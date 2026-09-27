@@ -2,7 +2,7 @@
   "projects": [
     {
       "visible": true,
-      "title": "🖥️ Terapia Online",
+      "title": "Terapia Online",
       "description": "A terapia online oferece um espaço seguro e acolhedor para explorar pensamentos e emoções, em qualquer lugar onde se sinta confortável. As sessões acontecem por videochamada, sendo importante estar em um local tranquilo e seguro e contar com uma conexão de internet estável. ",
       "image": {
         "src": "../../images/clement-h-95YRwf6CNw8-unsplash.jpg",
@@ -11,7 +11,7 @@
     },
     {
       "visible": true,
-      "title": "🧩 Flexibilidade",
+      "title": "Flexibilidade",
       "description": "Este formato proporciona flexibilidade de horários, permitindo integrar o acompanhamento psicológico à rotina, com confidencialidade, cuidado e qualidade profissional.",
       "tags": [],
       "image": {
@@ -21,7 +21,7 @@
     },
     {
       "visible": true,
-      "title": "💬 Comunicação Eficaz",
+      "title": "Comunicação Eficaz",
       "description": "A comunicação é facilitada por meio de videochamadas, chats e e-mails, garantindo que você se sinta ouvido e compreendido durante todo o processo terapêutico.",
       "tags": [],
       "image": {

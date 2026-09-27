@@ -1,21 +1,22 @@
 @import './animations.css';
 
 body[data-theme='lightTheme'] {
-  --primary-color: #0f3d0f;
-  --secondary-color: rgba(15, 61, 15, 0.1);
-  --tertiary-color: #e8ece8;
-  --text-color: #0d0d0d;
-  --subtext-color: #4a4a4a;
+  --primary-color: #234634;
+  --secondary-color: rgba(35, 70, 52, 0.09);
+  --tertiary-color: #e7ece7;
+  --text-color: #20291f;
+  --subtext-color: #56605a;
   --background-color: #f5f3f0;
-  --card-background-color: #ffffff;
-  --accent-color: #4a7c59;
-  --accent-light: #7fb58a;
-  --surface-color: #ede9e3;
-  --scroll-bar-color: rgba(15, 61, 15, 0.35);
-  --box-shadow-color: rgba(0, 0, 0, 0.08);
-  --box-shadow-hover-color: rgba(0, 0, 0, 0.18);
-  --base-font: 'DM Sans', -apple-system, sans-serif;
-  --heading-font: 'DM Sans', -apple-system, sans-serif;
+  --card-background-color: #fbfaf7;
+  --accent-color: #57876a;
+  --accent-light: #8fb79b;
+  --surface-color: #ece8e2;
+  --scroll-bar-color: rgba(35, 70, 52, 0.3);
+  --box-shadow-color: rgba(31, 45, 34, 0.07);
+  --box-shadow-hover-color: rgba(31, 45, 34, 0.14);
+  --border-radius: 10px;
+  --base-font: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --heading-font: 'Fraunces', Georgia, 'Times New Roman', serif;
   --code-block-bg: #151f28;
   --code-block-var: #ff7bbd;
   --code-block-num: #ffd166;
@@ -39,8 +40,9 @@ body[data-theme='darkTheme'] {
   --scroll-bar-color: rgba(168, 213, 181, 0.4);
   --box-shadow-color: rgba(0, 0, 0, 0.4);
   --box-shadow-hover-color: rgba(0, 0, 0, 0.65);
-  --base-font: 'DM Sans', -apple-system, sans-serif;
-  --heading-font: 'DM Sans', -apple-system, sans-serif;
+  --border-radius: 10px;
+  --base-font: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --heading-font: 'Fraunces', Georgia, 'Times New Roman', serif;
   --code-block-bg: #151f28;
   --code-block-var: #ff7bbd;
   --code-block-num: #ffd166;

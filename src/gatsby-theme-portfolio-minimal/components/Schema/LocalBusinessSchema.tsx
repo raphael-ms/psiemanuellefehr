@@ -79,6 +79,9 @@ export function LocalBusinessSchema(props: Readonly<LocalBusinessSchemaProps>): 
   };
 
   return (
-    <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
   );
 }

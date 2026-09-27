@@ -27,7 +27,10 @@ const videoSchema = {
 export function IntroVideo(props: Readonly<{ sectionId: string; heading?: string }>): React.ReactElement {
   return (
     <Section anchor={props.sectionId} heading={props.heading} additionalClasses={[classes.Intro]}>
-      <script type="application/ld+json">{JSON.stringify(videoSchema)}</script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+      />
       <AnimatedSection direction="up" delay={0.15}>
         <div className={classes.Layout}>
           <div className={classes.Frame}>

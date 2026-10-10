@@ -24,6 +24,8 @@ _Você já se pegou pensando: “Será que tenho_ **_défice de atenção_** _ou
 
 Então, vamos tentar entender primeiro as caractéristica da **Perturbação de Déficit de Atenção e Hiperatividade (PHDA)**. A PHDA é uma condição neurodesenvolvimental que costuma se manifestar na infância, mas pode persistir na vida adulta.
 
+> A PHDA é classificada como uma perturbação do neurodesenvolvimento no *DSM-5-TR* (American Psychological Association, 2022) e na *CID-11* (Organização Mundial da Saúde). O diagnóstico exige que os sintomas estejam presentes desde a infância e causem impacto significativo em mais do que um contexto de vida.
+
 Seus principais sinais envolvem **desatenção persistente**, **impulsividade** e, em alguns casos, **hiperatividade**. Já a **hiperestimulação** é uma reação natural do cérebro a ambientes com excesso de estímulos – como barulho, redes sociais, trabalho intenso ou falta de descanso. Nesse caso, a dificuldade de foco é temporária e tende a melhorar quando o corpo e a mente recuperam o equilíbrio.
 
 🔑 **Como diferenciar:**
@@ -35,7 +37,7 @@ Seus principais sinais envolvem **desatenção persistente**, **impulsividade**�
 *   **Impacto no dia a dia**: O PHDA interfere em várias áreas da vida (trabalho, relacionamentos, estudos), enquanto a hiperestimulação é mais situacional.
     
 
-### **Estratégias para relaxar e aumentar o tempo de atenção**
+## Estratégias para relaxar e aumentar o tempo de atenção
 
 Mesmo que você não tenha PHDA, adotar práticas para reduzir estímulos e melhorar o foco pode trazer benefícios imediatos:
 

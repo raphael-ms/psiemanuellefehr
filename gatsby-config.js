@@ -24,22 +24,6 @@ module.exports = {
       },
     },
     {
-      // Consent-gated Google Analytics. The theme's CookieBar calls
-      // initializeAndTrack() on "Accept", which relies on this plugin registering
-      // window.gatsbyPluginGDPRCookiesOptions on client entry.
-      resolve: "gatsby-plugin-gdpr-cookies",
-      options: {
-        googleAnalytics: {
-          trackingId: "G-0Z5YJD8CL6", // Google Analytics 4 Measurement ID
-          cookieName: "gatsby-gdpr-google-analytics", // must match CookieBar cookieName
-          anonymize: true,
-          allowAdFeatures: false,
-        },
-        // Only load tracking in production
-        environments: ["production"],
-      },
-    },
-    {
       resolve: "gatsby-plugin-sitemap",
       options: {
         serialize: ({ path, modifiedGmt }) => ({

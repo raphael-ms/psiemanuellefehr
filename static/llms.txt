@@ -3,6 +3,22 @@
 > ACT e Terapia de Esquemas. Atendimento online em português para Portugal
 > e para a diáspora lusófona. OPP #27145 · ERS E173632.
 
+Language: pt-PT
+
+## Para quem
+
+Adultos que procuram apoio psicológico online em português — incluindo
+portugueses e brasileiros a viver no estrangeiro (diáspora lusófona). Áreas de
+foco: ansiedade, depressão, autoestima, PHDA e neurodiversidade, questões
+relacionais e sexualidade, stress e desenvolvimento pessoal.
+
+## Abordagens terapêuticas
+
+- **TCC (Terapia Cognitivo-Comportamental)**: trabalha a relação entre pensamentos, emoções e comportamentos; tratamento de primeira linha para ansiedade e depressão (APA).
+- **ACT (Terapia de Aceitação e Compromisso)**: desenvolve aceitação de emoções difíceis e ação orientada por valores pessoais.
+- **Terapia de Esquemas**: identifica e transforma padrões emocionais e relacionais repetitivos formados na infância.
+- **Psicologia Intercultural**: integra o impacto da cultura e da migração na saúde mental.
+
 ## Páginas principais
 
 - [Início](https://www.psimanufehr.com/): Serviços de psicoterapia online e apresentação da psicóloga

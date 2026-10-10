@@ -42,7 +42,7 @@ export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
         {/* Eyebrow */}
         <motion.p
           className={classes.Intro}
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 1, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
@@ -52,7 +52,7 @@ export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
         {/* Heading — service-first value proposition */}
         <motion.h1
           className={classes.Title}
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 1, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
@@ -62,7 +62,7 @@ export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
         {/* Subtitle */}
         <motion.h2
           className={classes.Subtitle}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.65 }}
         >
@@ -71,7 +71,7 @@ export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
 
         {/* Description */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.85 }}
         >
@@ -80,7 +80,7 @@ export function HeroSection(props: Readonly<PageSection>): React.ReactElement {
 
         {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.05 }}
         >

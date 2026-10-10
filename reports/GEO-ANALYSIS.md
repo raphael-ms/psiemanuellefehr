@@ -1,406 +1,224 @@
 # GEO Analysis — psimanufehr.com
 **Emanuelle Fehr · Psicóloga Online · Portugal**
-**Generated:** 2026-09-20
+**Generated:** 2026-10-11 · **Previous:** 2026-09-20
 
 ---
 
-## GEO Readiness Score: 41 / 100
+## GEO Readiness Score: 65 / 100 ↑ (was 41)
 
-| Dimension | Weight | Score | Weighted |
-|---|---|---|---|
-| Citability | 25% | 42 | 10.5 |
-| Structural Readability | 20% | 40 | 8.0 |
-| Multi-Modal Content | 15% | 15 | 2.3 |
-| Authority & Brand Signals | 20% | 48 | 9.6 |
-| Technical Accessibility | 20% | 52 | 10.4 |
-| **Total** | | | **40.8 / 100** |
+| Dimension | Weight | Score | Weighted | Change |
+|---|---|---|---|---|
+| Citability | 25% | 65 | 16.3 | ↑ +23 |
+| Structural Readability | 20% | 55 | 11.0 | ↑ +15 |
+| Multi-Modal Content | 15% | 45 | 6.8 | ↑ +30 |
+| Authority & Brand Signals | 20% | 65 | 13.0 | ↑ +17 |
+| Technical Accessibility | 20% | 88 | 17.6 | ↑ +36 |
+| **Total** | | | **64.7 / 100** | **↑ +23.9** |
 
-**Assessment:** Strong professional identity foundations (verifiable license numbers, named clinical modalities, prestigious university credentials) but critically underbuilt structural layer. Primary weaknesses are no llms.txt, no explicit AI crawler declarations, no FAQ schema, thin blog content (3 posts, 500–700 words each), and virtually no external brand mentions beyond Instagram.
+**Assessment:** Major progress since September. All three top technical actions (llms.txt, explicit AI crawler rules, credential schema) are now live. The FAQPage schema adds five cite-ready Q&A blocks with academic sources. The intro video and Instagram reels section significantly raised multi-modal score. Remaining gap is primarily at the content layer: blog article bodies lack in-text citations, main headings use H3 instead of H2, and no visible FAQ content appears in rendered page HTML (only in schema). Brand mentions off-site (LinkedIn, healthcare directories) remain the ceiling-limiting factor.
 
 ---
 
 ## Platform Breakdown
 
-| Platform | Current Score | Ceiling Without Action | Ceiling With Full Recommendations |
+| Platform | Previous | Current | Notes |
 |---|---|---|---|
-| Google AI Overviews (pt-PT) | Very Low | Low | **Medium-High** (with FAQ schema + blog) |
-| Perplexity | Low–Medium | Medium | **High** (with llms.txt + structured data) |
-| ChatGPT web browsing | Low | Low–Medium | **Medium** (with LinkedIn + credential schema) |
-| Bing Copilot | Low | Low–Medium | **Medium** (with Person schema + IndexNow) |
-
-**Key platform insight:** Only 11% of domains are cited by both ChatGPT and Google AI Overviews for the same query. For a Portuguese psychologist, Google AIO (pt-PT) and Perplexity are the highest-leverage targets.
+| Google AI Overviews (pt-PT) | Very Low | **Medium** | FAQPage schema + SSR + explicit Google-Extended allow |
+| Perplexity | Low–Medium | **Medium-High** | llms.txt now live; structured schema |
+| ChatGPT web browsing | Low | **Low-Medium** | Better schema; still no LinkedIn/Wikipedia entity |
+| Bing Copilot | Low | **Low-Medium** | robots.txt improved; no IndexNow yet |
 
 ---
 
-## AI Crawler Access Status
+## AI Crawler Access Status: ✅ PASS
 
-`robots.txt` uses a single wildcard `User-agent: * / Allow: /` with **no named AI crawler rules**.
+All major AI crawlers are now explicitly declared in `robots.txt`:
 
-| Crawler | Status | Recommendation |
+| Crawler | Status |
+|---|---|
+| GPTBot (OpenAI) | ✅ Explicit `Allow: /` |
+| OAI-SearchBot (OpenAI) | ✅ Explicit `Allow: /` |
+| ChatGPT-User (OpenAI) | ✅ Explicit `Allow: /` |
+| ClaudeBot (Anthropic) | ✅ Explicit `Allow: /` |
+| PerplexityBot (Perplexity) | ✅ Explicit `Allow: /` |
+| Google-Extended (AIO training) | ✅ Explicit `Allow: /` |
+| CCBot (Common Crawl / training) | ⚠️ Implicitly allowed — consider blocking if training opt-out desired |
+
+**No action required.** This is now a strength.
+
+---
+
+## llms.txt Status: ✅ PRESENT
+
+`/llms.txt` is live and well-structured. It correctly describes the site, lists all four main pages, all three blog articles, and includes key credential facts (OPP #27145, ERS E173632, Universidade de Coimbra).
+
+**Remaining enhancements (low effort, medium impact):**
+
+1. Add a `## Abordagens terapêuticas` section listing TCC, ACT, Terapia de Esquemas with one-line definitions — Perplexity uses this to build topical summaries.
+2. Add a `## Para quem` section: "Adultos com ansiedade, depressão, PHDA, questões de autoestima, portugueses e brasileiros no exterior."
+3. Add canonical language signal: `Language: pt-PT`
+
+---
+
+## Schema Status: ✅ STRONG
+
+All four schema types are now implemented:
+
+| Schema | Status | Notes |
 |---|---|---|
-| GPTBot (OpenAI) | Implicitly allowed | Add explicit `Allow: /` |
-| OAI-SearchBot (OpenAI) | Implicitly allowed | Add explicit `Allow: /` |
-| ChatGPT-User (OpenAI) | Implicitly allowed | Add explicit `Allow: /` |
-| ClaudeBot (Anthropic) | Implicitly allowed | Add explicit `Allow: /` |
-| anthropic-ai (Anthropic) | Implicitly allowed | No action needed (training crawler) |
-| PerplexityBot | Implicitly allowed | Add explicit `Allow: /` |
-| Google-Extended (AIO training) | Implicitly allowed | Add explicit `Allow: /` |
-| CCBot (Common Crawl) | Implicitly allowed | Consider blocking (training only) |
+| `WebSite` | ✅ Live on homepage | — |
+| `LocalBusiness` / `ProfessionalService` | ✅ Live on homepage + online-therapy | — |
+| `Person` with `hasCredential` | ✅ Live | OPP + ERS credentials, alumniOf Coimbra + CRIAP |
+| `FAQPage` | ✅ Live on homepage + online-therapy | 5 Q&As with academic citations |
+| `BlogPosting` | ✅ Live on article pages | — |
 
-**Recommended `robots.txt` addition** (insert before the wildcard block):
-
-```
-User-agent: GPTBot
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-```
-
-Explicit declarations signal deliberate AI search participation. The difference between implicit and explicit is visible to any audit of the robots.txt — and Google documents Google-Extended specifically for AI Overview training opt-in.
-
----
-
-## llms.txt Status
-
-**Status: ABSENT — HTTP 404**
-
-`https://www.psimanufehr.com/llms.txt` does not exist. No RSL 1.0 licensing declaration was detected on any page.
-
-### Ready-to-Use Template
-
-Create `/static/llms.txt` in the Gatsby project (Gatsby serves `/static/` as root-level files):
-
-```
-# Emanuelle Fehr — Psicóloga Online
-> Psicóloga clínica especializada em Terapia Cognitivo-Comportamental (TCC),
-> ACT e Terapia de Esquemas. Atendimento online em português para Portugal
-> e para a diáspora lusófona. OPP #27145 · ERS E173632.
-
-## Páginas principais
-
-- [Início](https://www.psimanufehr.com/): Serviços de psicoterapia online e apresentação da psicóloga
-- [Sobre Mim](https://www.psimanufehr.com/about/): Credenciais, formação académica e abordagem terapêutica
-- [Psicoterapia Online](https://www.psimanufehr.com/online-therapy/): Como funciona a terapia online, modalidades e agendamento
-- [Blog](https://www.psimanufehr.com/blog/): Artigos sobre saúde mental em português
-
-## Artigos de blog
-
-- [Autoestima: Como Ela se Forma e Como Fortalecê-la](https://www.psimanufehr.com/blog/autoestima-como-fortalecer/): Guia prático baseado em TCC para fortalecer a autoestima
-- [PHDA: Como Identificar Sinais e Aprender Estratégias](https://www.psimanufehr.com/blog/tenho-perturbacao-de-deficit-de-atencao-e-hiperatividade/): Diferença entre PHDA e hiperestimulação; estratégias clínicas
-- [Conexão Emocional e Sexualidade](https://www.psimanufehr.com/blog/conexao-emocional/): O papel do vínculo afetivo na saúde relacional
-
-## Factos principais
-
-- Psicóloga registada: Ordem dos Psicólogos Portugueses #27145
-- Reguladora: Entidade Reguladora da Saúde E173632
-- Formação: Mestrado em Psicologia da Educação, Universidade de Coimbra (2020)
-- Especialização: TCC (CRIAP, 2024), ACT, Terapia de Esquemas
-- Sessões: 50 minutos, online por videochamada; sessão introdutória gratuita de 15 minutos
-- Clientes: Portugal, Países Baixos, Dinamarca, Suíça
-- Contacto: emanuelle.fehr@gmail.com | +351 910 809 408
-```
+**One gap:** `PersonSchema.sameAs` only lists Instagram and OPP verification URL. LinkedIn is missing despite being listed in `hero.json` social profiles. Once a LinkedIn URL exists, add it to `sameAs`.
 
 ---
 
 ## Brand Mention Analysis
 
-Brand mentions correlate **3× more strongly** with AI visibility than backlinks (Ahrefs, Dec 2025, 75,000 brands).
-
 | Platform | Correlation with AI Citations | Status | Priority |
 |---|---|---|---|
 | YouTube | ~0.737 (strongest signal) | Not detected | High |
 | Reddit | High | Not detected | High |
-| Wikipedia | High | Not applicable (private practice) | Low |
-| LinkedIn | Moderate | Configured but hidden on site | **Immediate** |
-| Instagram | Low (not crawlable) | Present (@manufehr) | — |
-| OPP Directory | Very high (regulatory authority) | Registration confirmed, web presence unverified | **Immediate** |
+| OPP Directory | Very high (authoritative .pt domain) | Registration confirmed; external URL unverified | **Immediate** |
+| LinkedIn | Moderate | No public profile URL | **Immediate** |
 | Doctoralia.pt | High (healthcare directory) | Not detected | High |
+| Psicólogo.net | Moderate | Not detected | Medium |
+| Instagram (@manufehr) | Not crawlable | Present but zero AI citation signal | — |
 
-**Instagram @manufehr is not crawlable by AI systems.** It generates social proof for humans but zero AI citation signal.
+**Instagram is invisible to AI crawlers.** It contributes zero AI citation signal — that's fine for social proof but cannot substitute for a crawlable LinkedIn or directory presence.
 
-**LinkedIn is the single fastest win.** A complete LinkedIn profile with OPP number, university, and specializations is crawlable by Bing (→ Bing Copilot), indexed by Google, and frequently cited by ChatGPT for practitioner queries. Currently configured in `hero.json` but `showIcons: false` hides it — **this was fixed in the Week 1 patch.**
-
-**OPP public directory:** The Ordem dos Psicólogos Portugueses member directory is a high-authority `.pt` domain. Verify that the OPP listing for #27145 links to `www.psimanufehr.com`. If not, contact OPP to update the profile URL. This is a Tier A citation.
+**Fastest wins:**
+1. **Verify OPP listing** at `ordemdospsicologos.pt` has `psimanufehr.com` as the website URL → free, authoritative .pt backlink + entity confirmation
+2. **Complete Doctoralia.pt profile** → highest-traffic Portuguese healthcare directory; frequently cited by Perplexity for "psicóloga online Portugal" queries
+3. **Create and complete LinkedIn profile** → add OPP number in "Licenses & Certifications", then add the URL to `PersonSchema.sameAs` in the codebase
 
 ---
 
 ## Passage-Level Citability Analysis
 
-**Optimal passage length for AI citation: 134–167 words** (self-contained answer blocks).
+**Optimal passage length for AI citation: 134–167 words.**
 
 ### Current Content Assessment
 
 | Content Block | Word Count | Citability | Issue |
 |---|---|---|---|
-| Homepage hero description | ~60 words | Low | Too short; no specific claims |
-| Services section (3 cards) | ~130 words total | Low | Fragmented across 3 cards; not self-contained |
-| Blog: Autoestima (full article) | ~700 words | Medium | Good structure but no cited stats |
-| Blog: PHDA | ~550 words | Low–Medium | Clinical claims without DSM-5/ICD-11 citations |
-| Blog: Conexão emocional | ~500 words | Low | Too short; vague |
-| About / credentials section | ~200 words | Medium | Has specific numbers (OPP, ERS, Coimbra) |
+| FAQ answers in schema | 60–120 words each | **High** | ✅ Self-contained, cited, in schema |
+| Blog: Autoestima | ~700 words total | Medium | No in-body citations; H3 not H2 |
+| Blog: PHDA | ~550 words total | Medium | Good structure but no DSM-5/ICD-11 reference |
+| Blog: Conexão emocional | ~500 words total | Low | Too short; vague claims |
+| Hero description | ~60 words | Low | No specific claims |
+| About section | ~200 words | Medium | Has credential numbers but no linked citations |
 
-### Passages to Rewrite for AI Citability
+**Critical gap:** FAQ schema answers contain the site's best-cited content (Journal of Affective Disorders 2020, APA, OPP guidelines) — but AI crawlers only see these in `<script type="application/ld+json">`, not in visible page HTML. An AI crawler reading the page body finds no cited statistics.
 
-**Current (hero description — too vague to cite):**
-> "A terapia é um espaço seguro e confidencial, pensado para promover autoconhecimento, acolhimento e desenvolvimento pessoal, com base em práticas fundamentadas cientificamente."
+### Highest-Impact Rewrite: Add visible FAQ to `/online-therapy/`
 
-**Rewritten for citability (first-60-word direct answer):**
-> "A Terapia Cognitivo-Comportamental (TCC) é uma abordagem psicológica baseada em evidências científicas, com eficácia comprovada no tratamento de ansiedade, depressão, PHDA e perturbações do comportamento (APA, 2019). Desenvolvida por Aaron T. Beck nos anos 1960, a TCC trabalha a relação entre pensamentos, emoções e comportamentos, ajudando a identificar padrões disfuncionais e a substituí-los por respostas mais adaptativas."
-
-This 67-word block is self-contained, directly answers "O que é TCC?", includes the originator's name and decade, and cites APA — three AI citation signals in one paragraph.
-
-**Recommended article structure for AI-optimal blog posts:**
-
-```
-## [Question-based H2, e.g., "O que é a Terapia Cognitivo-Comportamental?"]
-[40-60 word direct answer — the AI snippet zone]
-[80-120 word expansion with a cited statistic]
-[Practical example or case illustration]
-
-## [Second question-based H2]
-...
-```
-
----
-
-## Server-Side Rendering Check
-
-**Status: PASS**
-
-The site is built with **Gatsby 5.16.1** (static site generation). All HTML is pre-rendered at build time. AI crawlers that do not execute JavaScript (which is all of them) receive fully rendered content including all text, headings, and metadata.
-
-Confirmed signals:
-- Full content present in raw HTML fetch
-- Professional credentials, testimonials, and service descriptions all in static HTML
-- JavaScript is additive (animations, hydration) — not required to access any content
-- No client-only routing for key pages
-
-**This is the strongest technical GEO signal the site has.** A Next.js or React SPA with client-side rendering would score 20–30 points lower on Technical Accessibility.
-
----
-
-## Top 5 Highest-Impact Changes
-
-### 1. Create `/static/llms.txt` ⏱ 30 minutes · Impact: HIGH
-
-Uses the template above. Costs nothing, positions the site for Perplexity's llms.txt-aware crawling, and signals deliberate AI search participation. Gatsby serves `/static/` files at the domain root automatically — no config needed.
-
-### 2. Add explicit AI crawler allowances to `robots.txt` ⏱ 10 minutes · Impact: HIGH
-
-Paste the 18-line block above before the `User-agent: *` section in `static/robots.txt` or via Netlify's `_headers`. Explicit declarations are visible to any audit — and to Google's Search Console documentation for Google-Extended opt-in.
-
-### 3. Add FAQPage content + schema targeting PAA queries ⏱ 2–3 hours · Impact: VERY HIGH for Google AIO
-
-This is the single highest-impact action for **Google AI Overviews in pt-PT**. FAQPage schema creates direct eligibility for AI Overview snippets for health queries. Target questions:
-
-- "A psicoterapia online é tão eficaz quanto a presencial?"
-- "O que é a Terapia Cognitivo-Comportamental (TCC)?"
-- "Quanto tempo dura uma sessão de psicoterapia?"
-- "Como é a primeira consulta de psicologia online?"
-- "As sessões são confidenciais?"
-
-Add as a `<section>` on the `/online-therapy/` page (or homepage), marked up with FAQPage JSON-LD. Each answer: 60–150 words, self-contained, direct.
-
-### 4. Add Person + MedicalBusiness schema with `hasCredential` ⏱ 2–3 hours · Impact: HIGH
-
-Machine-readable credentials directly feed Google's Knowledge Graph, which feeds AI Overviews. The current schema has `ProfessionalService` and `Person` blocks but both are missing `hasCredential` (OPP #27145, ERS E173632), `@id`, `image`, `alumniOf`, and `sameAs`. Full corrected JSON-LD is in the main SEO audit.
-
-### 5. Blog content expansion with cited sources ⏱ Ongoing · Impact: HIGH over 3–6 months
-
-3 blog posts × ~600 words = ~1,800 words of indexed content on a YMYL health site. AI systems cannot build topical authority signals from this volume. Target:
-- 2 posts/month minimum
-- Each structured with question-based H2s
-- Each containing 2–4 cited academic or clinical sources (APA, DSM-5, Scielo.org, OPP guidelines)
-- First 60 words of each section answer the section question directly
-
----
-
-## Schema Recommendations for AI Discoverability
-
-### Priority 1 — `Person` with credentials (highest AI discoverability value)
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://www.psimanufehr.com/#person",
-  "name": "Emanuelle Fehr",
-  "jobTitle": "Psicóloga Clínica",
-  "url": "https://www.psimanufehr.com",
-  "image": "https://www.psimanufehr.com/static/fdb7067cc61cb75afa15c2736f638818/67c6e/emanuelle-about.avif",
-  "knowsAbout": [
-    "Terapia Cognitivo-Comportamental",
-    "ACT - Terapia de Aceitação e Compromisso",
-    "Terapia de Esquemas",
-    "Psicologia Intercultural",
-    "Ansiedade",
-    "Depressão",
-    "PHDA",
-    "Autoestima"
-  ],
-  "hasCredential": [
-    {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "license",
-      "name": "Ordem dos Psicólogos Portugueses",
-      "identifier": "27145",
-      "recognizedBy": {
-        "@type": "Organization",
-        "name": "Ordem dos Psicólogos Portugueses",
-        "url": "https://www.ordemdospsicologos.pt"
-      }
-    },
-    {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "license",
-      "name": "Entidade Reguladora da Saúde",
-      "identifier": "E173632",
-      "recognizedBy": {
-        "@type": "Organization",
-        "name": "Entidade Reguladora da Saúde",
-        "url": "https://www.ers.pt"
-      }
-    }
-  ],
-  "alumniOf": [
-    {
-      "@type": "CollegeOrUniversity",
-      "name": "Universidade de Coimbra",
-      "url": "https://www.uc.pt"
-    }
-  ],
-  "sameAs": [
-    "https://www.instagram.com/manufehr/"
-  ]
-}
-```
-
-### Priority 2 — `FAQPage` for `/online-therapy/` (Google AIO eligibility)
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "A psicoterapia online é tão eficaz quanto a presencial?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim. Diversos estudos publicados em revistas científicas, incluindo uma meta-análise de 2020 no Journal of Affective Disorders, demonstram que a psicoterapia online apresenta eficácia equivalente à presencial para ansiedade, depressão e perturbações de humor. A modalidade online permite maior flexibilidade de horários, elimina barreiras geográficas e mantém a qualidade do vínculo terapêutico quando conduzida por um psicólogo devidamente licenciado."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "O que é a Terapia Cognitivo-Comportamental (TCC)?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A Terapia Cognitivo-Comportamental (TCC) é uma abordagem psicológica baseada em evidências científicas, desenvolvida por Aaron T. Beck nos anos 1960. Trabalha a relação entre pensamentos, emoções e comportamentos, ajudando a identificar padrões de pensamento disfuncionais e a desenvolver estratégias para substituí-los. É reconhecida pela APA como tratamento de primeira linha para ansiedade, depressão, PHDA, fobias e outras perturbações."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quanto tempo dura uma sessão de psicoterapia online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "As sessões têm duração padrão de 50 minutos. Existe também uma sessão introdutória gratuita de 15 minutos, sem compromisso, para que possa conhecer a abordagem terapêutica e esclarecer dúvidas antes de iniciar o processo."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "As sessões de psicoterapia online são confidenciais?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim. Toda a informação partilhada em contexto terapêutico é protegida pelo sigilo profissional, nos termos do Código Deontológico da Ordem dos Psicólogos Portugueses (OPP). O sigilo só pode ser quebrado nos casos expressamente previstos na lei, como situações de risco imediato para a vida."
-      }
-    }
-  ]
-}
-```
-
----
-
-## Content Reformatting Suggestions
-
-### Blog Post Structure (apply to all 3 existing posts + future posts)
-
-**Current structure (weak for AI citation):**
-- Wall-of-text opening paragraph
-- H3 subheadings with no question framing
-- No statistics with sources
-- CTA buried at the end
-
-**Recommended structure (optimized for AI citation):**
+The `/online-therapy/` page renders the `OnlineTherapy` component. Adding a visible `<section>` with the five FAQ items as real HTML (in addition to the JSON-LD) would make the cited content crawlable as body text:
 
 ```markdown
-## [Question matching a PAA query — e.g., "O que é a autoestima e por que é importante?"]
-[Direct 40-60 word answer — this is the AI snippet zone]
+## A psicoterapia online é tão eficaz quanto a presencial?
 
-[134-167 word self-contained expansion block with one cited statistic]
+Sim. Uma meta-análise publicada no *Journal of Affective Disorders* (2020)
+demonstra que a psicoterapia online apresenta eficácia equivalente à presencial
+para ansiedade, depressão e perturbações de humor. A modalidade online é
+reconhecida pela Ordem dos Psicólogos Portugueses (OPP) e pela American
+Psychological Association (APA) como uma forma válida e segura de
+acompanhamento psicológico.
 
-## [Second question — e.g., "Quais são os sinais de baixa autoestima?"]
-[Direct answer + evidence-based list]
+## O que é a Terapia Cognitivo-Comportamental (TCC)?
 
-## [Third question — e.g., "Como fortalecer a autoestima com a TCC?"]
-[Practical steps + citation to CBT research]
-
----
-**Referências:**
-- American Psychological Association (2019). *Clinical Practice Guideline for the Treatment of Depression*.
-- [Other specific, verifiable citations]
+A Terapia Cognitivo-Comportamental (TCC) é uma abordagem psicológica baseada
+em evidências científicas, desenvolvida por Aaron T. Beck nos anos 1960. Trabalha
+a relação entre pensamentos, emoções e comportamentos, ajudando a identificar
+padrões de pensamento disfuncionais e a desenvolver estratégias adaptativas.
+É reconhecida pela APA como tratamento de primeira linha para ansiedade,
+depressão, PHDA, fobias e outras perturbações emocionais.
 ```
 
-### Homepage — Add a Citable Definition Block
-
-Add this above the services section (currently missing entirely):
-
-```
-## O que é a Terapia Cognitivo-Comportamental?
-
-A Terapia Cognitivo-Comportamental (TCC) é uma abordagem
-psicológica baseada em evidências científicas, com eficácia
-comprovada pela APA e pela OMS para o tratamento de ansiedade,
-depressão, PHDA e perturbações da autoestima. Desenvolvida por
-Aaron T. Beck nos anos 1960, a TCC trabalha a relação entre
-pensamentos, emoções e comportamentos — identificando padrões
-disfuncionais e desenvolvendo estratégias personalizadas para
-uma vida mais equilibrada. As sessões são conduzidas online,
-em português, por videochamada segura e confidencial.
-```
-
-This 92-word block contains: a direct definition, an authority citation (APA, OMS), the originator's name and decade, condition coverage, and the service delivery format — all in one extractable passage.
+Each of these is 80–120 words — pair them with the JSON-LD and both body-text crawlers and schema parsers see the same cited facts.
 
 ---
 
-## Implementation Checklist
+## Server-Side Rendering Check: ✅ PASS
 
-| Action | Effort | Impact | Done |
+Gatsby generates fully static HTML at build time. All page content — credentials, testimonials, service descriptions, FAQ answers in schema — is available in raw HTML without JavaScript execution. This remains the site's strongest technical GEO signal.
+
+---
+
+## Blog Structure Gaps
+
+The blog articles have good topical relevance but two consistent structural issues:
+
+**1. Main section headings are H3, not H2**
+
+```markdown
+<!-- Current (weak) -->
+### Como a Autoestima se Desenvolve?
+
+<!-- Better (H2 for AI section parsing) -->
+## Como a Autoestima se Desenvolve?
+```
+
+AI systems weight H2s as primary section delimiters. H3-first articles appear as one undifferentiated block to a passage extractor.
+
+**2. No in-body citations**
+
+Both blog articles make clinical claims without sources:
+- "Esses padrões podem alimentar sentimentos de ansiedade, isolamento e até sintomas depressivos" — no citation
+- PHDA article references neurodesenvolvimental criteria — should cite DSM-5 or ICD-11
+
+**Minimum fix per post:**
+Add one citation block at the end of the first substantive section:
+
+```markdown
+> Segundo a *Associação Americana de Psicologia (APA, 2019)*, a TCC é
+> considerada tratamento de primeira linha para perturbações de ansiedade
+> em adultos, com taxas de remissão de 50–60% após 12–16 sessões.
+```
+
+---
+
+## Top 5 Remaining Changes
+
+### 1. Add visible FAQ section to `/online-therapy/` page ⏱ 2 hrs · Impact: VERY HIGH
+Move the five FAQ answers from schema-only to actual page HTML (H2 questions, paragraph answers). Keep the JSON-LD too — both signals compound. This makes cited academic content available to body-text passage extractors, not just schema parsers.
+
+### 2. Add LinkedIn profile URL to `PersonSchema.sameAs` ⏱ 15 min (once profile exists) · Impact: HIGH
+Open ChatGPT and Bing Copilot entity recognition for "Emanuelle Fehr psicóloga" queries. LinkedIn is the single most-cited professional network in ChatGPT practitioner responses.
+
+### 3. Verify and update OPP directory listing ⏱ 30 min · Impact: HIGH
+Confirm that OPP member #27145's public listing links to `psimanufehr.com`. This is a Tier-A citation from a regulated `.pt` authority domain — it directly improves AI confidence in the entity.
+
+### 4. Create Doctoralia.pt profile ⏱ 1 hr · Impact: HIGH
+Doctoralia is the highest-traffic healthcare directory in Portugal. Perplexity frequently cites it for "psicóloga online Portugal" queries. Include OPP number, specialties, and link back to `psimanufehr.com`.
+
+### 5. Upgrade blog H3 headings to H2 + add one citation per article ⏱ 1 hr/post · Impact: MEDIUM-HIGH
+Small markup change with measurable AI citability impact. Blog posts are the site's only long-form content — improving their structure helps citability without requiring new content.
+
+---
+
+## Implementation Checklist (Updated)
+
+| Action | Effort | Impact | Status |
 |---|---|---|---|
-| Create `/static/llms.txt` | 30 min | High | ☐ |
-| Add AI crawlers to `robots.txt` | 10 min | High | ☐ |
-| Add `Person` schema with `hasCredential` | 2 hrs | High | ☐ |
-| Add `FAQPage` schema to `/online-therapy/` | 3 hrs | Very High | ☐ |
-| Add citable definition block to homepage | 1 hr | Medium | ☐ |
-| Enable LinkedIn (`showIcons: true` in hero.json) | Done ✓ | High | ✓ |
-| Restructure blog posts with question-based H2s | 4 hrs/post | High | ☐ |
-| Add cited sources to all blog posts | 2 hrs/post | High | ☐ |
+| Create `/static/llms.txt` | 30 min | High | ✅ Done |
+| Add AI crawlers to `robots.txt` | 10 min | High | ✅ Done |
+| Add `Person` schema with `hasCredential` | 2 hrs | High | ✅ Done |
+| Add `FAQPage` schema | 3 hrs | Very High | ✅ Done |
+| Add intro video | — | High | ✅ Done |
+| Enable LinkedIn social icon | — | Low | ✅ Done |
+| Add visible FAQ section to `/online-therapy/` | 2 hrs | Very High | ☐ |
+| Add LinkedIn URL to `PersonSchema.sameAs` | 15 min | High | ☐ (needs profile first) |
 | Verify OPP directory links to site | 30 min | High | ☐ |
 | Create Doctoralia.pt profile | 1 hr | High | ☐ |
+| Upgrade blog H3 headings → H2 | 30 min total | Medium | ☐ |
+| Add 1–2 citations per blog post | 1 hr/post | Medium-High | ☐ |
+| Enhance llms.txt with therapy descriptions | 30 min | Low-Medium | ☐ |
 | Expand blog to 2 posts/month | Ongoing | High | ☐ |
 
 ---
 
-*Generated by `/seo-geo` · psimanufehr.com · 2026-09-20*
+*Generated by `/seo-geo` · psimanufehr.com · 2026-10-11*

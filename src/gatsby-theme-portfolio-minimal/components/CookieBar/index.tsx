@@ -1,15 +1,14 @@
 import React from 'react';
 import CookieConsent from 'react-cookie-consent';
-import Cookies from 'js-cookie';
-import { initializeAndTrack } from 'gatsby-plugin-gdpr-cookies';
-import { useLocation } from '@reach/router';
 import { Animation } from 'gatsby-theme-portfolio-minimal/src/components/Animation';
 import 'gatsby-theme-portfolio-minimal/src/components/CookieBar/style.css';
 import * as classes from 'gatsby-theme-portfolio-minimal/src/components/CookieBar/style.module.css';
 
 type Gtag = (...args: unknown[]) => void;
 
-// Propagates the visitor's choice to Google Consent Mode (no-op until gtag.js has loaded)
+// gtag.js is loaded for every visitor in gatsby-ssr.js with analytics consent
+// denied by default (cookieless modeling). Accepting/declining only flips the
+// Consent Mode state — no script (re)loading needed.
 function updateAnalyticsConsent(granted: boolean): void {
     const gtag = (window as unknown as { gtag?: Gtag }).gtag;
     if (typeof gtag === 'function') {
@@ -18,8 +17,6 @@ function updateAnalyticsConsent(granted: boolean): void {
 }
 
 export function CookieBar(): React.ReactElement {
-    const location = useLocation();
-
     return (
         <Animation className={classes.CookieBar} type="fadeUp" delay={1000}>
             <CookieConsent
@@ -29,11 +26,9 @@ export function CookieBar(): React.ReactElement {
                 declineButtonId="decline"
                 declineButtonText="Recusar"
                 enableDeclineButton={true}
+                setDeclineCookie={true}
                 disableStyles={true}
-                onAccept={() => {
-                    updateAnalyticsConsent(true);
-                    initializeAndTrack(location);
-                }}
+                onAccept={() => updateAnalyticsConsent(true)}
                 onDecline={() => updateAnalyticsConsent(false)}
             >
                 <p>
@@ -46,24 +41,8 @@ export function CookieBar(): React.ReactElement {
     );
 }
 
-export function EnsureActivatedTrackingCookie() {
-    const location = useLocation();
-
-    React.useEffect(() => {
-        const configured = Cookies.get('portfolio-minimal-ga-configured');
-        const enabled = Cookies.get('gatsby-gdpr-google-analytics');
-
-        if (configured !== 'true') return;
-        if (configured === 'true' && enabled === 'true') return;
-
-        try {
-            Cookies.set('gatsby-gdpr-google-analytics', 'true');
-            initializeAndTrack(location);
-        } catch {
-            Cookies.remove('gatsby-gdpr-google-analytics');
-            console.warn('Could not initialize Google Analytics');
-        }
-    }, []);
-
+// gtag.js now loads for all visitors via Consent Mode, so no activation cookie
+// is required. Kept as a no-op for the theme Layout when useCookieBar is false.
+export function EnsureActivatedTrackingCookie(): null {
     return null;
 }

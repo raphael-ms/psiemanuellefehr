@@ -24,13 +24,13 @@ Você já se pegou duvidando do seu valor ou sentindo que nunca é “bom o bast
 
 A autoestima é a base da nossa saúde emocional. Ela influencia nossas decisões, a forma como enfrentamos desafios, como nos posicionamos em relacionamentos e até mesmo como lidamos com a ansiedade. A boa notícia é que, embora seja moldada desde cedo, a autoestima **pode ser fortalecida em qualquer fase da vida**.
 
-### **Como a Autoestima se Desenvolve ?**
+## Como a Autoestima se Desenvolve?
 
 A autoestima começa a ser construída ainda na infância, a partir das experiências com nossos cuidadores, familiares e ambiente social. Palavras de incentivo, apoio emocional e a sensação de pertencimento contribuem para que a criança desenvolva uma imagem positiva de si mesma. Por outro lado, críticas constantes, rejeição ou falta de afeto podem gerar insegurança e uma visão distorcida do próprio valor.
 
 Com o tempo, essas experiências iniciais se somam a outros fatores, como amizades, relacionamentos amorosos, conquistas acadêmicas e profissionais. Cada nova vivência reforça (ou fragiliza) a forma como nos percebemos. Por isso, mesmo na vida adulta, é possível revisitar essas crenças e transformá-las.
 
-### **Características de Pessoas com Baixa Autoestima**
+## Características de Pessoas com Baixa Autoestima
 
 Reconhecer os sinais de baixa autoestima é essencial para iniciar o processo de mudança. Algumas características comuns incluem:
 
@@ -47,7 +47,9 @@ Reconhecer os sinais de baixa autoestima é essencial para iniciar o processo de
 
 Esses padrões podem alimentar sentimentos de ansiedade, isolamento e até sintomas depressivos, tornando o dia a dia mais pesado e limitante.
 
-### **Técnicas para Aumentar a Autoestima**
+> Segundo a *American Psychological Association* (APA), a Terapia Cognitivo-Comportamental (TCC) é considerada um tratamento de primeira linha para a ansiedade e a depressão em adultos — perturbações frequentemente associadas a padrões de baixa autoestima e autocrítica.
+
+## Técnicas para Aumentar a Autoestima
 
 Fortalecer a autoestima é um processo que exige **consistência** e **autocompaixão**. Aqui vão algumas práticas que podem ajudar:
 

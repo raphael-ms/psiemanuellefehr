@@ -63,6 +63,7 @@ export function LocalBusinessSchema(props: Readonly<LocalBusinessSchemaProps>): 
     },
     sameAs: [
       "https://www.instagram.com/manufehr/",
+      "https://www.linkedin.com/in/emanuelle-fehr-ba3146226/",
     ],
     hasCredential: {
       "@type": "EducationalOccupationalCredential",

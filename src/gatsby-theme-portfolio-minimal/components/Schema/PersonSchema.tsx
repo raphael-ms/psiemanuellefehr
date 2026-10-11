@@ -71,6 +71,7 @@ export function PersonSchema(props: Readonly<PersonSchemaProps>): React.ReactEle
     ],
     sameAs: props.sameAs || [
       "https://www.instagram.com/manufehr/",
+      "https://www.linkedin.com/in/emanuelle-fehr-ba3146226/",
       "https://www.ordemdospsicologos.pt/pt/publico/verificar-cedula",
     ],
     worksFor: { "@id": `${siteUrl}/#organization` },

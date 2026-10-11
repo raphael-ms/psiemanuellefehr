@@ -22,12 +22,14 @@ exports.onRenderBody = ({ setHeadComponents }) => {
 window.dataLayer = window.dataLayer || [];
 function gtag(){ dataLayer.push(arguments); }
 window.gatsbyPluginGDPRCookiesOptions = window.gatsbyPluginGDPRCookiesOptions || { environments: [] };
-var hasConsent = /(?:^|; )gatsby-gdpr-google-analytics=true/.test(document.cookie);
+// TEMP: analytics_storage forced granted for traffic investigation week.
+// Revert to: analytics_storage: hasConsent ? 'granted' : 'denied'
+// var hasConsent = /(?:^|; )gatsby-gdpr-google-analytics=true/.test(document.cookie);
 gtag('consent', 'default', {
   ad_storage: 'denied',
   ad_user_data: 'denied',
   ad_personalization: 'denied',
-  analytics_storage: hasConsent ? 'granted' : 'denied',
+  analytics_storage: 'granted',
   wait_for_update: 500
 });
 gtag('set', 'url_passthrough', true);

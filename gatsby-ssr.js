@@ -21,6 +21,7 @@ exports.onRenderBody = ({ setHeadComponents }) => {
         __html: `
 window.dataLayer = window.dataLayer || [];
 function gtag(){ dataLayer.push(arguments); }
+window.gatsbyPluginGDPRCookiesOptions = window.gatsbyPluginGDPRCookiesOptions || { environments: [] };
 var hasConsent = /(?:^|; )gatsby-gdpr-google-analytics=true/.test(document.cookie);
 gtag('consent', 'default', {
   ad_storage: 'denied',

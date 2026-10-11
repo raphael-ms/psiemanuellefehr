@@ -1,0 +1,5 @@
+[build]
+  # `gatsby clean` wipes .cache/ and public/ before each build so component
+  # shadowing and plugin/config changes can't be served from a stale incremental
+  # cache (which previously shipped an old CookieBar chunk and crashed on accept).
+  command = "gatsby clean && gatsby build"
